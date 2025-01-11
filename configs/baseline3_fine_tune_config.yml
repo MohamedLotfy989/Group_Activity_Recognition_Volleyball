@@ -1,0 +1,26 @@
+batch_size: 32
+class_names:
+- blocking
+- digging
+- falling
+- jumping
+- moving
+- setting
+- spiking
+- standing
+- waiting
+dataset_root: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Volley
+  dataset files
+dataset_type: PersonActionDataset
+device: cuda
+learning_rate: 0.0001
+lr_scheduler: true
+mix_up: true
+mode: action
+num_epochs: 25
+num_workers: 4
+patience: 5
+pin_memory: true
+save_dir: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline3/phase1_fine_tune
+seed: 42
+use_all_frames: false

@@ -1,0 +1,25 @@
+batch_size: 32
+class_names:
+- l-pass
+- r-pass
+- l-spike
+- r_spike
+- l_set
+- r_set
+- l_winpoint
+- r_winpoint
+dataset_root: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Volley
+  dataset files
+dataset_type: GroupActivityDataset
+device: cuda
+learning_rate: 0.0001
+lr_scheduler: true
+mix_up: true
+mode: group_activity
+num_epochs: 25
+num_workers: 0
+patience: 5
+pin_memory: true
+save_dir: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline1
+seed: 42
+use_all_frames: false

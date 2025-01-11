@@ -1,0 +1,24 @@
+batch_size: 64
+class_names:
+- l-pass
+- r-pass
+- l-spike
+- r_spike
+- l_set
+- r_set
+- l_winpoint
+- r_winpoint
+dataset_root: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline3/phase2_feature_extraction/features
+dataset_type: PlayersFeatures
+device: cuda
+hidden_size_player: 1024
+input_size: 2048
+learning_rate: 0.0001
+lr_scheduler: true
+mix_up: false
+num_epochs: 25
+num_workers: 0
+patience: 5
+pin_memory: true
+save_dir: D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline5
+seed: 42
