@@ -281,46 +281,6 @@ class VolleyballDataset(Dataset):
                 }
             }
 
-# class ImportPlayersFeatures(Dataset):
-#     """
-#         A dataset class for loading precomputed player features.
-#
-#         Parameters:
-#         - features_path (str): Path to the pickle file containing features and labels.
-#
-#         Attributes:
-#         - features (list): Loaded features for each clip.
-#         - labels (list): Corresponding labels for each clip.
-#
-#         Methods:
-#         - __len__: Returns the number of samples in the dataset.
-#         - __getitem__: Returns a sample (features and label) at the specified index.
-#         """
-#     def __init__(self, features_path):
-#         # Load the pickle file with error handling
-#         try:
-#             with open(features_path, 'rb') as f:
-#                 data = pickle.load(f)
-#         except (FileNotFoundError, IOError) as e:
-#             raise RuntimeError(f"Error loading file {features_path}: {e}")
-#
-#         features = []
-#         labels = []
-#         for clip_key, item in data.items():
-#             features.append(item['features'])
-#             labels.append(item['label'])
-#
-#         self.features = features  # Shape: (num_clips, 9, 12, 2048)
-#         self.labels = labels  # Shape: (num_clips,)
-#
-#     def __len__(self):
-#         return len(self.labels)
-#
-#     def __getitem__(self, idx):
-#         features = torch.FloatTensor(self.features[idx])  # (9, 12, 2048)
-#         label = torch.LongTensor([self.labels[idx]]).squeeze()  # (1,) -> ()
-#         return features, label
-
 class ImportPlayersFeatures(Dataset):
     """
         A dataset class for loading precomputed player features.
@@ -336,22 +296,13 @@ class ImportPlayersFeatures(Dataset):
         - __len__: Returns the number of samples in the dataset.
         - __getitem__: Returns a sample (features and label) at the specified index.
         """
-    def __init__(self, features_path, exclude_classes=False, classes_to_exclude=None, annotations_path=None,annotations=None):
+    def __init__(self, features_path):
         # Load the pickle file with error handling
-        if classes_to_exclude is None:
-            classes_to_exclude = {}
         try:
             with open(features_path, 'rb') as f:
                 data = pickle.load(f)
         except (FileNotFoundError, IOError) as e:
             raise RuntimeError(f"Error loading file {features_path}: {e}")
-
-        if exclude_classes:
-            if not annotations_path:
-                raise ValueError("annotations_path must be provided when exclude_classes is True.")
-            # with open(annotations_path, 'rb') as f:
-            #     annotations = pickle.load(f)
-            data = self.process_features(data, annotations,classes_to_exclude)
 
         features = []
         labels = []
@@ -370,30 +321,6 @@ class ImportPlayersFeatures(Dataset):
         label = torch.LongTensor([self.labels[idx]]).squeeze()  # (1,) -> ()
         return features, label
 
-    @staticmethod
-    def process_features(data, annotations,classes_to_exclude):
-        """
-        Process features by converting less important classes to zero tensors.
-
-        Parameters:
-        - data (dict): The original feature data loaded from the pickle file.
-        - annotations (dict): The annotations containing player actions per frame.
-
-        Returns:
-        - dict: Processed feature data with less important classes zeroed out.
-        """
-        for clip_key, clip_data in data.items():
-            video_id = clip_data['meta']['video_id']
-            clip_id = clip_data['meta']['clip_id']
-            frame_ids = list(range(int(clip_id) - 4, int(clip_id) + 5))
-
-            for frame_idx, frame_id in enumerate(frame_ids):
-                if frame_id in annotations[video_id][clip_id]['frame_boxes_dct']:
-                    players = annotations[video_id][clip_id]['frame_boxes_dct'][frame_id]
-                    for player_idx, player in enumerate(players):
-                        if player.category  in classes_to_exclude:
-                            clip_data['features'][frame_idx, player_idx, :] = 0  # Replace with zero vector
-        return data
 
 
 def get_dataloader(dataset_type, path_or_root, batch_size, split='train', use_all_frames=False,
@@ -446,7 +373,7 @@ def get_dataloader(dataset_type, path_or_root, batch_size, split='train', use_al
                 pin_memory=pin_memory,
             )
     elif dataset_type == 'PlayersFeatures':
-        dataset = ImportPlayersFeatures(features_path=path_or_root,exclude_classes=exclude_classes,classes_to_exclude=classes_to_exclude,annotations_path=annotations_path,annotations=annotations)
+        dataset = ImportPlayersFeatures(features_path=path_or_root)
         dataloader = DataLoader(
             dataset,
             batch_size=batch_size,
