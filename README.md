@@ -96,7 +96,6 @@ project_root/
 │   ├── train_baseline8.py
 │   └── __init__.py
 ├── runs/                    # Outputs and saved models
-├── LICENSE                  # License information
 ├── requirements.txt         # Dependencies
 └── README.md                # Project description
 ```
@@ -116,8 +115,8 @@ project_root/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/deep-learning-volleyball.git
-   cd deep-learning-volleyball
+   git clone https://github.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball.git
+   cd Group_Activity_Recognition_Volleyball
    ```
 
 2. Install dependencies:
@@ -187,6 +186,4 @@ You can document specific improvements in this section.
 ## Contributions
 We welcome contributions! Feel free to open issues or submit pull requests for bug fixes or enhancements.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for full details.
 
