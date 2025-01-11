@@ -1,0 +1,142 @@
+2025-01-10 11:35:11,696 - INFO - Epoch 1, Training Loss: 1.0755, Metrics: {'accuracy': 0.6389405204460966, 'f1_weighted': 0.6405908845705734, 'f1_macro': 0.6113878871030084, 'f1_micro': 0.6389405204460966}
+2025-01-10 11:35:15,395 - INFO - Epoch 1, Validation Loss: 1.8296, Validation Metrics: {'accuracy': 0.6882923191648024, 'f1_weighted': 0.6763022315180307, 'f1_macro': 0.6431002821707221, 'f1_micro': 0.6882923191648024}
+2025-01-10 11:35:16,037 - INFO - Epoch 1: Best model saved with Validation F1score: 0.6763
+2025-01-10 11:35:28,401 - INFO - Epoch 2, Training Loss: 0.4501, Metrics: {'accuracy': 0.8592007434944238, 'f1_weighted': 0.8577268854510877, 'f1_macro': 0.8208422363798143, 'f1_micro': 0.8592007434944238}
+2025-01-10 11:35:32,102 - INFO - Epoch 2, Validation Loss: 0.9210, Validation Metrics: {'accuracy': 0.7457121551081283, 'f1_weighted': 0.7437346867030064, 'f1_macro': 0.7056935574891787, 'f1_micro': 0.7457121551081283}
+2025-01-10 11:35:32,557 - INFO - Epoch 2: Best model saved with Validation F1score: 0.7437
+2025-01-10 11:35:44,947 - INFO - Epoch 3, Training Loss: 0.3126, Metrics: {'accuracy': 0.9117100371747212, 'f1_weighted': 0.9113139810093045, 'f1_macro': 0.8860486198012193, 'f1_micro': 0.9117100371747212}
+2025-01-10 11:35:48,649 - INFO - Epoch 3, Validation Loss: 0.9215, Validation Metrics: {'accuracy': 0.6808351976137211, 'f1_weighted': 0.6906316683178327, 'f1_macro': 0.6739035995332581, 'f1_micro': 0.6808351976137211}
+2025-01-10 11:36:01,107 - INFO - Epoch 4, Training Loss: 0.2443, Metrics: {'accuracy': 0.9330855018587361, 'f1_weighted': 0.9328112032460063, 'f1_macro': 0.9098249372164003, 'f1_micro': 0.9330855018587361}
+2025-01-10 11:36:04,857 - INFO - Epoch 4, Validation Loss: 0.8741, Validation Metrics: {'accuracy': 0.7173750932140194, 'f1_weighted': 0.705359707146183, 'f1_macro': 0.6696253604265892, 'f1_micro': 0.7173750932140194}
+2025-01-10 11:36:17,395 - INFO - Epoch 5, Training Loss: 0.2045, Metrics: {'accuracy': 0.9372676579925651, 'f1_weighted': 0.9373418169726241, 'f1_macro': 0.9153050325375063, 'f1_micro': 0.9372676579925651}
+2025-01-10 11:36:21,173 - INFO - Epoch 5, Validation Loss: 0.7653, Validation Metrics: {'accuracy': 0.7434750186428039, 'f1_weighted': 0.7394731855066299, 'f1_macro': 0.7210168636545569, 'f1_micro': 0.7434750186428039}
+2025-01-10 11:36:33,630 - INFO - Epoch 6, Training Loss: 0.1464, Metrics: {'accuracy': 0.9642193308550185, 'f1_weighted': 0.9640515575766502, 'f1_macro': 0.9485191526077588, 'f1_micro': 0.9642193308550185}
+2025-01-10 11:36:37,326 - INFO - Epoch 6, Validation Loss: 1.0547, Validation Metrics: {'accuracy': 0.6607009694258016, 'f1_weighted': 0.6684238285262738, 'f1_macro': 0.670558584962542, 'f1_micro': 0.6607009694258016}
+2025-01-10 11:36:49,795 - INFO - Epoch 7, Training Loss: 0.1124, Metrics: {'accuracy': 0.9772304832713755, 'f1_weighted': 0.9771753135733383, 'f1_macro': 0.9657982608223845, 'f1_micro': 0.9772304832713755}
+2025-01-10 11:36:53,501 - INFO - Epoch 7, Validation Loss: 0.6418, Validation Metrics: {'accuracy': 0.8105891126025354, 'f1_weighted': 0.8117427216063059, 'f1_macro': 0.7937465795429203, 'f1_micro': 0.8105891126025354}
+2025-01-10 11:36:54,134 - INFO - Epoch 7: Best model saved with Validation F1score: 0.8117
+2025-01-10 11:37:06,508 - INFO - Epoch 8, Training Loss: 0.0773, Metrics: {'accuracy': 0.9902416356877324, 'f1_weighted': 0.9902273814939417, 'f1_macro': 0.9848871188203766, 'f1_micro': 0.9902416356877324}
+2025-01-10 11:37:10,149 - INFO - Epoch 8, Validation Loss: 1.0258, Validation Metrics: {'accuracy': 0.7054436987322893, 'f1_weighted': 0.7171644170581281, 'f1_macro': 0.7059974978731949, 'f1_micro': 0.7054436987322893}
+2025-01-10 11:37:22,660 - INFO - Epoch 9, Training Loss: 0.0616, Metrics: {'accuracy': 0.9907063197026023, 'f1_weighted': 0.9906842003520855, 'f1_macro': 0.9846834249602509, 'f1_micro': 0.9907063197026023}
+2025-01-10 11:37:26,334 - INFO - Epoch 9, Validation Loss: 0.6626, Validation Metrics: {'accuracy': 0.808351976137211, 'f1_weighted': 0.8068938732318531, 'f1_macro': 0.7829042513012869, 'f1_micro': 0.808351976137211}
+2025-01-10 11:37:38,728 - INFO - Epoch 10, Training Loss: 0.0496, Metrics: {'accuracy': 0.9948884758364313, 'f1_weighted': 0.9948769277327676, 'f1_macro': 0.9914867429456358, 'f1_micro': 0.9948884758364313}
+2025-01-10 11:37:42,347 - INFO - Epoch 10, Validation Loss: 0.9816, Validation Metrics: {'accuracy': 0.7203579418344519, 'f1_weighted': 0.7292479940070526, 'f1_macro': 0.72475482576666, 'f1_micro': 0.7203579418344519}
+2025-01-10 11:37:54,823 - INFO - Epoch 11, Training Loss: 0.0363, Metrics: {'accuracy': 0.9967472118959108, 'f1_weighted': 0.996751936810364, 'f1_macro': 0.9941856967448, 'f1_micro': 0.9967472118959108}
+2025-01-10 11:37:58,502 - INFO - Epoch 11, Validation Loss: 0.7255, Validation Metrics: {'accuracy': 0.8016405667412378, 'f1_weighted': 0.7923876410457953, 'f1_macro': 0.7559850079521491, 'f1_micro': 0.8016405667412378}
+2025-01-10 11:38:11,135 - INFO - Epoch 12, Training Loss: 0.0248, Metrics: {'accuracy': 0.9990706319702602, 'f1_weighted': 0.9990696915047373, 'f1_macro': 0.9982038048977939, 'f1_micro': 0.9990706319702602}
+2025-01-10 11:38:14,803 - INFO - Epoch 12, Validation Loss: 0.6782, Validation Metrics: {'accuracy': 0.8120805369127517, 'f1_weighted': 0.8138542358536893, 'f1_macro': 0.7933273685054864, 'f1_micro': 0.8120805369127517}
+2025-01-10 11:38:15,326 - INFO - Epoch 12: Best model saved with Validation F1score: 0.8139
+2025-01-10 11:38:27,791 - INFO - Epoch 13, Training Loss: 0.0209, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:38:31,576 - INFO - Epoch 13, Validation Loss: 0.6486, Validation Metrics: {'accuracy': 0.8158090976882924, 'f1_weighted': 0.8174913144438871, 'f1_macro': 0.8001031535085664, 'f1_micro': 0.8158090976882924}
+2025-01-10 11:38:32,047 - INFO - Epoch 13: Best model saved with Validation F1score: 0.8175
+2025-01-10 11:38:44,737 - INFO - Epoch 14, Training Loss: 0.0192, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:38:48,376 - INFO - Epoch 14, Validation Loss: 0.6347, Validation Metrics: {'accuracy': 0.8210290827740492, 'f1_weighted': 0.82263836042525, 'f1_macro': 0.8061787215247596, 'f1_micro': 0.8210290827740492}
+2025-01-10 11:38:48,920 - INFO - Epoch 14: Best model saved with Validation F1score: 0.8226
+2025-01-10 11:39:01,304 - INFO - Epoch 15, Training Loss: 0.0176, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:39:05,008 - INFO - Epoch 15, Validation Loss: 0.6359, Validation Metrics: {'accuracy': 0.8232662192393736, 'f1_weighted': 0.8246629990983927, 'f1_macro': 0.8080826565255813, 'f1_micro': 0.8232662192393736}
+2025-01-10 11:39:05,424 - INFO - Epoch 15: Best model saved with Validation F1score: 0.8247
+2025-01-10 11:39:17,919 - INFO - Epoch 16, Training Loss: 0.0173, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:39:21,521 - INFO - Epoch 16, Validation Loss: 0.6362, Validation Metrics: {'accuracy': 0.8240119313944817, 'f1_weighted': 0.8258066525675526, 'f1_macro': 0.8086850491074631, 'f1_micro': 0.8240119313944817}
+2025-01-10 11:39:22,095 - INFO - Epoch 16: Best model saved with Validation F1score: 0.8258
+2025-01-10 11:39:34,576 - INFO - Epoch 17, Training Loss: 0.0165, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:39:38,247 - INFO - Epoch 17, Validation Loss: 0.6265, Validation Metrics: {'accuracy': 0.8284862043251305, 'f1_weighted': 0.83022093505237, 'f1_macro': 0.8140739885814875, 'f1_micro': 0.8284862043251305}
+2025-01-10 11:39:38,781 - INFO - Epoch 17: Best model saved with Validation F1score: 0.8302
+2025-01-10 11:39:51,374 - INFO - Epoch 18, Training Loss: 0.0159, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:39:55,079 - INFO - Epoch 18, Validation Loss: 0.6329, Validation Metrics: {'accuracy': 0.8292319164802386, 'f1_weighted': 0.8305431243411463, 'f1_macro': 0.8167442607070802, 'f1_micro': 0.8292319164802386}
+2025-01-10 11:39:55,755 - INFO - Epoch 18: Best model saved with Validation F1score: 0.8305
+2025-01-10 11:40:08,258 - INFO - Epoch 19, Training Loss: 0.0154, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:40:12,236 - INFO - Epoch 19, Validation Loss: 0.6377, Validation Metrics: {'accuracy': 0.8232662192393736, 'f1_weighted': 0.8249551788276289, 'f1_macro': 0.8096885882961719, 'f1_micro': 0.8232662192393736}
+2025-01-10 11:40:24,732 - INFO - Epoch 20, Training Loss: 0.0165, Metrics: {'accuracy': 0.9995353159851301, 'f1_weighted': 0.9995353490089185, 'f1_macro': 0.9995397553258092, 'f1_micro': 0.9995353159851301}
+2025-01-10 11:40:28,467 - INFO - Epoch 20, Validation Loss: 0.6302, Validation Metrics: {'accuracy': 0.8307233407904548, 'f1_weighted': 0.8320397196402434, 'f1_macro': 0.8181901545811596, 'f1_micro': 0.8307233407904548}
+2025-01-10 11:40:29,289 - INFO - Epoch 20: Best model saved with Validation F1score: 0.8320
+2025-01-10 11:40:41,734 - INFO - Epoch 21, Training Loss: 0.0139, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:40:45,440 - INFO - Epoch 21, Validation Loss: 0.6335, Validation Metrics: {'accuracy': 0.8277404921700223, 'f1_weighted': 0.8293640083863678, 'f1_macro': 0.8131950493275396, 'f1_micro': 0.8277404921700223}
+2025-01-10 11:40:58,125 - INFO - Epoch 22, Training Loss: 0.0141, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:41:02,096 - INFO - Epoch 22, Validation Loss: 0.6289, Validation Metrics: {'accuracy': 0.8262490678598061, 'f1_weighted': 0.8279161803212322, 'f1_macro': 0.8118274672910302, 'f1_micro': 0.8262490678598061}
+2025-01-10 11:41:14,603 - INFO - Epoch 23, Training Loss: 0.0133, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:41:18,321 - INFO - Epoch 23, Validation Loss: 0.6340, Validation Metrics: {'accuracy': 0.8269947800149142, 'f1_weighted': 0.8287476870571235, 'f1_macro': 0.8135314351659089, 'f1_micro': 0.8269947800149142}
+2025-01-10 11:41:30,817 - INFO - Epoch 24, Training Loss: 0.0138, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:41:34,560 - INFO - Epoch 24, Validation Loss: 0.6263, Validation Metrics: {'accuracy': 0.8307233407904548, 'f1_weighted': 0.8323268406376971, 'f1_macro': 0.8170824472028958, 'f1_micro': 0.8307233407904548}
+2025-01-10 11:41:35,296 - INFO - Epoch 24: Best model saved with Validation F1score: 0.8323
+2025-01-10 11:41:47,750 - INFO - Epoch 25, Training Loss: 0.0142, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:41:51,433 - INFO - Epoch 25, Validation Loss: 0.6393, Validation Metrics: {'accuracy': 0.8284862043251305, 'f1_weighted': 0.8304647825163912, 'f1_macro': 0.8149845749046685, 'f1_micro': 0.8284862043251305}
+2025-01-10 11:41:51,580 - INFO - Loaded model from D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline7\best_model.pth
+2025-01-10 11:41:51,580 - INFO - Loaded model from D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline7\best_model.pth
+2025-01-10 11:41:55,278 - INFO - Test Loss: 0.4138, Test Metrics: {'accuracy': 0.87509349289454, 'f1_weighted': 0.8753319739976232, 'f1_macro': 0.8524881717825197, 'f1_micro': 0.87509349289454}
+2025-01-10 11:41:55,278 - INFO - Test Loss: 0.4138, Test Metrics: {'accuracy': 0.87509349289454, 'f1_weighted': 0.8753319739976232, 'f1_macro': 0.8524881717825197, 'f1_micro': 0.87509349289454}
+2025-01-10 11:43:42,090 - INFO - Epoch 1, Training Loss: 1.0755, Metrics: {'accuracy': 0.6389405204460966, 'f1_weighted': 0.6405908845705734, 'f1_macro': 0.6113878871030084, 'f1_micro': 0.6389405204460966}
+2025-01-10 11:43:45,813 - INFO - Epoch 1, Validation Loss: 1.8296, Validation Metrics: {'accuracy': 0.6882923191648024, 'f1_weighted': 0.6763022315180307, 'f1_macro': 0.6431002821707221, 'f1_micro': 0.6882923191648024}
+2025-01-10 11:43:46,349 - INFO - Epoch 1: Best model saved with Validation F1score: 0.6763
+2025-01-10 11:43:58,573 - INFO - Epoch 2, Training Loss: 0.4501, Metrics: {'accuracy': 0.8592007434944238, 'f1_weighted': 0.8577268854510877, 'f1_macro': 0.8208422363798143, 'f1_micro': 0.8592007434944238}
+2025-01-10 11:44:02,274 - INFO - Epoch 2, Validation Loss: 0.9210, Validation Metrics: {'accuracy': 0.7457121551081283, 'f1_weighted': 0.7437346867030064, 'f1_macro': 0.7056935574891787, 'f1_micro': 0.7457121551081283}
+2025-01-10 11:44:02,885 - INFO - Epoch 2: Best model saved with Validation F1score: 0.7437
+2025-01-10 11:44:15,124 - INFO - Epoch 3, Training Loss: 0.3126, Metrics: {'accuracy': 0.9117100371747212, 'f1_weighted': 0.9113139810093045, 'f1_macro': 0.8860486198012193, 'f1_micro': 0.9117100371747212}
+2025-01-10 11:44:18,793 - INFO - Epoch 3, Validation Loss: 0.9215, Validation Metrics: {'accuracy': 0.6808351976137211, 'f1_weighted': 0.6906316683178327, 'f1_macro': 0.6739035995332581, 'f1_micro': 0.6808351976137211}
+2025-01-10 11:44:31,180 - INFO - Epoch 4, Training Loss: 0.2443, Metrics: {'accuracy': 0.9330855018587361, 'f1_weighted': 0.9328112032460063, 'f1_macro': 0.9098249372164003, 'f1_micro': 0.9330855018587361}
+2025-01-10 11:44:34,834 - INFO - Epoch 4, Validation Loss: 0.8741, Validation Metrics: {'accuracy': 0.7173750932140194, 'f1_weighted': 0.705359707146183, 'f1_macro': 0.6696253604265892, 'f1_micro': 0.7173750932140194}
+2025-01-10 11:44:47,157 - INFO - Epoch 5, Training Loss: 0.2045, Metrics: {'accuracy': 0.9372676579925651, 'f1_weighted': 0.9373418169726241, 'f1_macro': 0.9153050325375063, 'f1_micro': 0.9372676579925651}
+2025-01-10 11:44:50,773 - INFO - Epoch 5, Validation Loss: 0.7653, Validation Metrics: {'accuracy': 0.7434750186428039, 'f1_weighted': 0.7394731855066299, 'f1_macro': 0.7210168636545569, 'f1_micro': 0.7434750186428039}
+2025-01-10 11:45:03,370 - INFO - Epoch 6, Training Loss: 0.1464, Metrics: {'accuracy': 0.9642193308550185, 'f1_weighted': 0.9640515575766502, 'f1_macro': 0.9485191526077588, 'f1_micro': 0.9642193308550185}
+2025-01-10 11:45:07,287 - INFO - Epoch 6, Validation Loss: 1.0547, Validation Metrics: {'accuracy': 0.6607009694258016, 'f1_weighted': 0.6684238285262738, 'f1_macro': 0.670558584962542, 'f1_micro': 0.6607009694258016}
+2025-01-10 11:45:19,616 - INFO - Epoch 7, Training Loss: 0.1124, Metrics: {'accuracy': 0.9772304832713755, 'f1_weighted': 0.9771753135733383, 'f1_macro': 0.9657982608223845, 'f1_micro': 0.9772304832713755}
+2025-01-10 11:45:23,273 - INFO - Epoch 7, Validation Loss: 0.6418, Validation Metrics: {'accuracy': 0.8105891126025354, 'f1_weighted': 0.8117427216063059, 'f1_macro': 0.7937465795429203, 'f1_micro': 0.8105891126025354}
+2025-01-10 11:45:23,970 - INFO - Epoch 7: Best model saved with Validation F1score: 0.8117
+2025-01-10 11:45:36,332 - INFO - Epoch 8, Training Loss: 0.0773, Metrics: {'accuracy': 0.9902416356877324, 'f1_weighted': 0.9902273814939417, 'f1_macro': 0.9848871188203766, 'f1_micro': 0.9902416356877324}
+2025-01-10 11:45:39,927 - INFO - Epoch 8, Validation Loss: 1.0258, Validation Metrics: {'accuracy': 0.7054436987322893, 'f1_weighted': 0.7171644170581281, 'f1_macro': 0.7059974978731949, 'f1_micro': 0.7054436987322893}
+2025-01-10 11:45:52,310 - INFO - Epoch 9, Training Loss: 0.0616, Metrics: {'accuracy': 0.9907063197026023, 'f1_weighted': 0.9906842003520855, 'f1_macro': 0.9846834249602509, 'f1_micro': 0.9907063197026023}
+2025-01-10 11:45:55,955 - INFO - Epoch 9, Validation Loss: 0.6626, Validation Metrics: {'accuracy': 0.808351976137211, 'f1_weighted': 0.8068938732318531, 'f1_macro': 0.7829042513012869, 'f1_micro': 0.808351976137211}
+2025-01-10 11:46:08,389 - INFO - Epoch 10, Training Loss: 0.0496, Metrics: {'accuracy': 0.9948884758364313, 'f1_weighted': 0.9948769277327676, 'f1_macro': 0.9914867429456358, 'f1_micro': 0.9948884758364313}
+2025-01-10 11:46:12,056 - INFO - Epoch 10, Validation Loss: 0.9816, Validation Metrics: {'accuracy': 0.7203579418344519, 'f1_weighted': 0.7292479940070526, 'f1_macro': 0.72475482576666, 'f1_micro': 0.7203579418344519}
+2025-01-10 11:46:24,489 - INFO - Epoch 11, Training Loss: 0.0363, Metrics: {'accuracy': 0.9967472118959108, 'f1_weighted': 0.996751936810364, 'f1_macro': 0.9941856967448, 'f1_micro': 0.9967472118959108}
+2025-01-10 11:46:28,104 - INFO - Epoch 11, Validation Loss: 0.7255, Validation Metrics: {'accuracy': 0.8016405667412378, 'f1_weighted': 0.7923876410457953, 'f1_macro': 0.7559850079521491, 'f1_micro': 0.8016405667412378}
+2025-01-10 11:46:40,569 - INFO - Epoch 12, Training Loss: 0.0248, Metrics: {'accuracy': 0.9990706319702602, 'f1_weighted': 0.9990696915047373, 'f1_macro': 0.9982038048977939, 'f1_micro': 0.9990706319702602}
+2025-01-10 11:46:44,227 - INFO - Epoch 12, Validation Loss: 0.6782, Validation Metrics: {'accuracy': 0.8120805369127517, 'f1_weighted': 0.8138542358536893, 'f1_macro': 0.7933273685054864, 'f1_micro': 0.8120805369127517}
+2025-01-10 11:46:44,715 - INFO - Epoch 12: Best model saved with Validation F1score: 0.8139
+2025-01-10 11:46:57,121 - INFO - Epoch 13, Training Loss: 0.0209, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:47:00,736 - INFO - Epoch 13, Validation Loss: 0.6486, Validation Metrics: {'accuracy': 0.8158090976882924, 'f1_weighted': 0.8174913144438871, 'f1_macro': 0.8001031535085664, 'f1_micro': 0.8158090976882924}
+2025-01-10 11:47:01,192 - INFO - Epoch 13: Best model saved with Validation F1score: 0.8175
+2025-01-10 11:47:13,614 - INFO - Epoch 14, Training Loss: 0.0192, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:47:17,283 - INFO - Epoch 14, Validation Loss: 0.6347, Validation Metrics: {'accuracy': 0.8210290827740492, 'f1_weighted': 0.82263836042525, 'f1_macro': 0.8061787215247596, 'f1_micro': 0.8210290827740492}
+2025-01-10 11:47:17,879 - INFO - Epoch 14: Best model saved with Validation F1score: 0.8226
+2025-01-10 11:47:30,252 - INFO - Epoch 15, Training Loss: 0.0176, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:47:33,882 - INFO - Epoch 15, Validation Loss: 0.6359, Validation Metrics: {'accuracy': 0.8232662192393736, 'f1_weighted': 0.8246629990983927, 'f1_macro': 0.8080826565255813, 'f1_micro': 0.8232662192393736}
+2025-01-10 11:47:34,358 - INFO - Epoch 15: Best model saved with Validation F1score: 0.8247
+2025-01-10 11:47:46,793 - INFO - Epoch 16, Training Loss: 0.0173, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:47:50,435 - INFO - Epoch 16, Validation Loss: 0.6362, Validation Metrics: {'accuracy': 0.8240119313944817, 'f1_weighted': 0.8258066525675526, 'f1_macro': 0.8086850491074631, 'f1_micro': 0.8240119313944817}
+2025-01-10 11:47:51,096 - INFO - Epoch 16: Best model saved with Validation F1score: 0.8258
+2025-01-10 11:48:03,524 - INFO - Epoch 17, Training Loss: 0.0165, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:48:07,201 - INFO - Epoch 17, Validation Loss: 0.6265, Validation Metrics: {'accuracy': 0.8284862043251305, 'f1_weighted': 0.83022093505237, 'f1_macro': 0.8140739885814875, 'f1_micro': 0.8284862043251305}
+2025-01-10 11:48:07,740 - INFO - Epoch 17: Best model saved with Validation F1score: 0.8302
+2025-01-10 11:48:20,155 - INFO - Epoch 18, Training Loss: 0.0159, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:48:23,795 - INFO - Epoch 18, Validation Loss: 0.6329, Validation Metrics: {'accuracy': 0.8292319164802386, 'f1_weighted': 0.8305431243411463, 'f1_macro': 0.8167442607070802, 'f1_micro': 0.8292319164802386}
+2025-01-10 11:48:24,386 - INFO - Epoch 18: Best model saved with Validation F1score: 0.8305
+2025-01-10 11:48:36,839 - INFO - Epoch 19, Training Loss: 0.0154, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:48:40,504 - INFO - Epoch 19, Validation Loss: 0.6377, Validation Metrics: {'accuracy': 0.8232662192393736, 'f1_weighted': 0.8249551788276289, 'f1_macro': 0.8096885882961719, 'f1_micro': 0.8232662192393736}
+2025-01-10 11:48:52,936 - INFO - Epoch 20, Training Loss: 0.0165, Metrics: {'accuracy': 0.9995353159851301, 'f1_weighted': 0.9995353490089185, 'f1_macro': 0.9995397553258092, 'f1_micro': 0.9995353159851301}
+2025-01-10 11:48:56,609 - INFO - Epoch 20, Validation Loss: 0.6302, Validation Metrics: {'accuracy': 0.8307233407904548, 'f1_weighted': 0.8320397196402434, 'f1_macro': 0.8181901545811596, 'f1_micro': 0.8307233407904548}
+2025-01-10 11:48:57,169 - INFO - Epoch 20: Best model saved with Validation F1score: 0.8320
+2025-01-10 11:49:09,620 - INFO - Epoch 21, Training Loss: 0.0139, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:49:13,279 - INFO - Epoch 21, Validation Loss: 0.6335, Validation Metrics: {'accuracy': 0.8277404921700223, 'f1_weighted': 0.8293640083863678, 'f1_macro': 0.8131950493275396, 'f1_micro': 0.8277404921700223}
+2025-01-10 11:49:25,753 - INFO - Epoch 22, Training Loss: 0.0141, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:49:29,459 - INFO - Epoch 22, Validation Loss: 0.6289, Validation Metrics: {'accuracy': 0.8262490678598061, 'f1_weighted': 0.8279161803212322, 'f1_macro': 0.8118274672910302, 'f1_micro': 0.8262490678598061}
+2025-01-10 11:49:41,902 - INFO - Epoch 23, Training Loss: 0.0133, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:49:45,559 - INFO - Epoch 23, Validation Loss: 0.6340, Validation Metrics: {'accuracy': 0.8269947800149142, 'f1_weighted': 0.8287476870571235, 'f1_macro': 0.8135314351659089, 'f1_micro': 0.8269947800149142}
+2025-01-10 11:49:57,946 - INFO - Epoch 24, Training Loss: 0.0138, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:50:01,617 - INFO - Epoch 24, Validation Loss: 0.6263, Validation Metrics: {'accuracy': 0.8307233407904548, 'f1_weighted': 0.8323268406376971, 'f1_macro': 0.8170824472028958, 'f1_micro': 0.8307233407904548}
+2025-01-10 11:50:02,515 - INFO - Epoch 24: Best model saved with Validation F1score: 0.8323
+2025-01-10 11:50:14,892 - INFO - Epoch 25, Training Loss: 0.0142, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:50:18,592 - INFO - Epoch 25, Validation Loss: 0.6393, Validation Metrics: {'accuracy': 0.8284862043251305, 'f1_weighted': 0.8304647825163912, 'f1_macro': 0.8149845749046685, 'f1_micro': 0.8284862043251305}
+2025-01-10 11:50:30,998 - INFO - Epoch 26, Training Loss: 0.0140, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:50:34,731 - INFO - Epoch 26, Validation Loss: 0.6359, Validation Metrics: {'accuracy': 0.8292319164802386, 'f1_weighted': 0.8309606375438615, 'f1_macro': 0.8146598735042009, 'f1_micro': 0.8292319164802386}
+2025-01-10 11:50:47,171 - INFO - Epoch 27, Training Loss: 0.0133, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:50:50,878 - INFO - Epoch 27, Validation Loss: 0.6324, Validation Metrics: {'accuracy': 0.8269947800149142, 'f1_weighted': 0.8287304009229907, 'f1_macro': 0.8127610498799638, 'f1_micro': 0.8269947800149142}
+2025-01-10 11:51:03,335 - INFO - Epoch 28, Training Loss: 0.0138, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:51:07,000 - INFO - Epoch 28, Validation Loss: 0.6425, Validation Metrics: {'accuracy': 0.8269947800149142, 'f1_weighted': 0.828770328398422, 'f1_macro': 0.8125283970070999, 'f1_micro': 0.8269947800149142}
+2025-01-10 11:51:19,484 - INFO - Epoch 29, Training Loss: 0.0135, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:51:23,159 - INFO - Epoch 29, Validation Loss: 0.6330, Validation Metrics: {'accuracy': 0.8277404921700223, 'f1_weighted': 0.8293143698641551, 'f1_macro': 0.812846425039322, 'f1_micro': 0.8277404921700223}
+2025-01-10 11:51:35,627 - INFO - Epoch 30, Training Loss: 0.0131, Metrics: {'accuracy': 1.0, 'f1_weighted': 1.0, 'f1_macro': 1.0, 'f1_micro': 1.0}
+2025-01-10 11:51:39,326 - INFO - Epoch 30, Validation Loss: 0.6291, Validation Metrics: {'accuracy': 0.8299776286353467, 'f1_weighted': 0.8315872414898532, 'f1_macro': 0.8163741152654558, 'f1_micro': 0.8299776286353467}
+2025-01-10 11:51:39,539 - INFO - Loaded model from D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline7\best_model.pth
+2025-01-10 11:51:39,539 - INFO - Loaded model from D:/Data Science/ML Dr Mostafa/03 Deep learning/Projects/Vollyball/Code/Refactoring2/runs/baseline7\best_model.pth
+2025-01-10 11:51:43,222 - INFO - Test Loss: 0.4138, Test Metrics: {'accuracy': 0.87509349289454, 'f1_weighted': 0.8753319739976232, 'f1_macro': 0.8524881717825197, 'f1_micro': 0.87509349289454}
+2025-01-10 11:51:43,222 - INFO - Test Loss: 0.4138, Test Metrics: {'accuracy': 0.87509349289454, 'f1_weighted': 0.8753319739976232, 'f1_macro': 0.8524881717825197, 'f1_micro': 0.87509349289454}
