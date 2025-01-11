@@ -181,7 +181,6 @@ Below is a table comparing the accuracy of various baselines as reported in the 
 | B7-Two-stage Model without LSTM 2 | 80.2%            | 88%                           |
 | Our Two-stage Hierarchical Model | 81.9%            | 93%                           |
 
-You can document specific improvements in this section.
 
 ## Contributions
 We welcome contributions! Feel free to open issues or submit pull requests for bug fixes or enhancements.
