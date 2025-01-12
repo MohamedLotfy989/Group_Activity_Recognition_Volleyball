@@ -42,10 +42,13 @@ class Baseline8(nn.Module):
         batch_size, num_frames, num_players, feature_dim = x.size()
 
         # Reshape for player-level LSTM: merge batch and frame dimensions
-        x = x.view(batch_size * num_frames, num_players, feature_dim)
+        x = x.view(batch_size * num_players, num_frames, feature_dim)
         x = self.layer_norm1(x)
         # Process each player with LSTM
         x, _ = self.player_lstm(x)  # Output shape: (batch_size * num_frames, num_players, hidden_size_player)
+        x = x.contiguous()
+
+        x = x.view(batch_size*num_frames, num_players, -1)
 
         # Split features into two teams (first 6 and last 6 players)
         team_1 = x[:, :6, :]  # Shape: (batch_size * num_frames, 6, hidden_size_player)
