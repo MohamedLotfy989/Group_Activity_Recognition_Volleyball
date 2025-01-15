@@ -1,0 +1,22 @@
+batch_size: 32
+class_names:
+- l-pass
+- r-pass
+- l-spike
+- r_spike
+- l_set
+- r_set
+- l_winpoint
+- r_winpoint
+dataset_root: /runs/baseline3/phase2_feature_extraction/features
+dataset_type: PlayersFeatures
+device: cuda
+learning_rate: 0.0005
+lr_scheduler: true
+mix_up: true
+num_epochs: 30
+num_workers: 0
+patience: 8
+pin_memory: true
+save_dir: ./runs/baseline9
+seed: 42
