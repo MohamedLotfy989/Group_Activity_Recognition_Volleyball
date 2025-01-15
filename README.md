@@ -163,12 +163,14 @@ project_root/
 
 ### Baseline1 - Image Classification:(accuracy 78%)
 This baseline classifies group activities using only spatial features extracted from a single frame of the scene.
+
 Key Features:
 - No temporal information is considered.
 - The entire frame is treated as a single entity for classification.
 
 ### Baseline3 - Fine-Tuned Person Classification:(accuracy 76%)
 Fine-tunes a pre-trained network to classify individual actions from cropped player images.
+
 Key Features:
 - Focuses on learning individual player actions.
 - Uses person crops extracted from frames with bounding box annotations.
@@ -179,30 +181,35 @@ Steps:
 
 ### Baseline4 - Temporal Model with Image Features:(accuracy 80%)
 Incorporates temporal modeling by processing sequential frames to predict group activities.
+
 Key Features:
 - Uses full-frame features from consecutive frames.
 - Employs an LSTM to capture temporal dependencies.
 
 ### Baseline5 - Temporal Model with Person Features:(accuracy 88%)
 Models temporal dependencies using features extracted from individual player crops over time.
+
 Key Features:
 - Processes person-level features with temporal modeling.
 - Combines individual actions to predict group activities.
 
 ### Baseline6 - Two-Stage Model Without LSTM 1:(accuracy 81%)
 A two-stage hierarchical model that avoids LSTMs for temporal modeling.
+
 Key Features:
 - Uses pooling mechanisms instead of temporal connections.
 - Focuses on aggregating spatial features across players.
 
 ### Baseline7 - Two-Stage Model Without LSTM 2:(accuracy 88%)
 An enhanced version of Baseline6, with improved pooling and feature aggregation techniques.
+
 Key Features:
 - Employs adaptive pooling for team-level feature aggregation.
 - Provides better representation for group activities.
 
 ### Baseline8 - Two-Stage Hierarchical Model:(accuracy 93%)
 A hierarchical model that combines player-level and scene-level representations using LSTMs.
+
 Key Features:
 - Player-level LSTM processes temporal features of individual players.
 - Scene-level LSTM aggregates features for the entire scene.
