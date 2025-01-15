@@ -10,7 +10,7 @@
   - [Dataset Splits](#dataset-splits)
 - [Project Structure](#project-structure)
 - [Features](#features)
-- [Baseline Descriptionss](#baselines-description)
+- [Baseline Descriptions](#baseline-descriptions)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
