@@ -1,7 +1,53 @@
 # Deep Learning Project for Volleyball Activity Recognition
 
+
+## Table of Contents
+- [Overview](#overview)
+- [Improvements and Results](#improvements-and-results)
+  - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
+- [Dataset](#dataset)
+  - [Dataset Labels](#dataset-labels)
+  - [Dataset Splits](#dataset-splits)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Training](#training)
+  - [Configuration](#configuration)
+  - [Evaluation](#evaluation)
+  - [Logging and Outputs](#logging-and-outputs)
+- [Features](#features)
+
 ## Overview
-This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, validation, testing, and performance evaluation with advanced metrics. This implementation is based on the paper "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim et al. The method builds on hierarchical LSTM-based architectures for modeling both individual actions and group activities.
+This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, evaluation, and metric visualization. Based on the seminal paper ["CVPR 2016"](http://arxiv.org/pdf/1607.02643v1.pdf), "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim, this project explores hierarchical LSTM-based architectures for understanding individual actions and group activities.
+
+
+## Improvements and Results
+**Differences from the Original Paper**
+
+This project introduces several updates and refinements over the original work:
+
+ 1. Improved Baselines: Updated baseline implementations with better network architectures, e.g., using ResNet50 instead of AlexNet.
+
+ 2. higher accuracies were achieved in all baselines compared to the paper. Specifically, our final baseline achieved an accuracy of 93%, whereas the paper reported 81.9%.
+
+ 3. A new baseline(Baseline9) was introduced that achieved 92% accuracy without the need for a temporal model.
+
+ 4. Modern Framework: Re-implemented in PyTorch with flexible configuration handling via YAML.
+### Accuracy and Improvement Over the Paper
+Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
+
+| Baseline                                  | Accuracy (Paper) | Accuracy (Our Implementation) |
+|-------------------------------------------|------------------|-------------------------------|
+| B1-Image Classification                   | 66.7%            | 78%                           |
+| B3-Fine-tuned Person Classification       | 68.1%            | 76%                           |
+| B4-Temporal Model with Image Features     | 63.1%            | 80%                           |
+| B5-Temporal Model with Person Features    | 67.6%            | 88%                           |
+| B6-Two-stage Model without LSTM 1         | 74.7%            | 81%                           |
+| B7-Two-stage Model without LSTM 2         | 80.2%            | 88%                           |
+| Our Two-stage Hierarchical Model          | 81.9%            | 93%                           |
+| B9-Fine-Tuned Team Spatial Classification | N/A              | 92%                           |
+
 
 ## Dataset
 We used a volleyball dataset introduced in the aforementioned paper. The dataset consists of:
@@ -38,6 +84,9 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 - **Training Set**: 2/3 of the videos.
 - **Validation Set**: 15 videos.
 - **Test Set**: 1/3 of the videos.
+
+### Dataset Sample
+![Dataset Sample](https://i.imgur.com/DUhaofS.gif)
 
 The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
 
@@ -99,6 +148,71 @@ project_root/
 ├── requirements.txt         # Dependencies
 └── README.md                # Project description
 ```
+## Features
+- **Multiple Baselines**: Baseline1, Baseline3, Baseline4, Baseline5, Baseline6, Baseline7,Baseline8, and Baseline9.
+- **Configurable Parameters**: YAML-based configuration for easy adjustments.
+- **Early Stopping**: Built-in mechanism to halt training if no improvement is observed.
+- **Metric Visualization**: Includes confusion matrices and classification reports.
+- **Scalable Design**: Modular structure for future expansion and maintainability.
+
+## Baseline Descriptions
+
+### Baseline1 - Image Classification:(accuracy 78%)
+This baseline classifies group activities using only spatial features extracted from a single frame of the scene.
+Key Features:
+- No temporal information is considered.
+- The entire frame is treated as a single entity for classification.
+
+### Baseline3 - Fine-Tuned Person Classification:(accuracy 76%)
+Fine-tunes a pre-trained network to classify individual actions from cropped player images.
+Key Features:
+- Focuses on learning individual player actions.
+- Uses person crops extracted from frames with bounding box annotations.
+Steps:
+- Phase 1: Fine-tune the model on individual player crops.
+- Phase 2: Extract features for players in each frame.
+- Phase 3: Max pool the extracted feature over players and classify group activities.
+
+### Baseline4 - Temporal Model with Image Features:(accuracy 80%)
+Incorporates temporal modeling by processing sequential frames to predict group activities.
+Key Features:
+- Uses full-frame features from consecutive frames.
+- Employs an LSTM to capture temporal dependencies.
+
+### Baseline5 - Temporal Model with Person Features:(accuracy 88%)
+Models temporal dependencies using features extracted from individual player crops over time.
+Key Features:
+- Processes person-level features with temporal modeling.
+- Combines individual actions to predict group activities.
+
+### Baseline6 - Two-Stage Model Without LSTM 1:(accuracy 81%)
+A two-stage hierarchical model that avoids LSTMs for temporal modeling.
+Key Features:
+- Uses pooling mechanisms instead of temporal connections.
+- Focuses on aggregating spatial features across players.
+
+### Baseline7 - Two-Stage Model Without LSTM 2:(accuracy 88%)
+An enhanced version of Baseline6, with improved pooling and feature aggregation techniques.
+Key Features:
+- Employs adaptive pooling for team-level feature aggregation.
+- Provides better representation for group activities.
+
+### Baseline8 - Two-Stage Hierarchical Model:(accuracy 93%)
+A hierarchical model that combines player-level and scene-level representations using LSTMs.
+Key Features:
+- Player-level LSTM processes temporal features of individual players.
+- Scene-level LSTM aggregates features for the entire scene.
+- Outputs group activity predictions based on hierarchical features.
+  
+![Confusion_Matrix B8](https://i.imgur.com/VmKiOO3.png)
+
+### Baseline9 - Fine-Tuned Team Spatial Classification(No Temporal):(accuracy 92%)
+Fine-tunes individual player actions and then processes each team separately based on the spatial position of each player.A novel baseline that achieves high accuracy (92%) without the need for any temporal modeling.
+Key Features:
+- Fine-tunes models on individual player actions.
+- Separately processes each team based on spatial positions.
+  
+![Confusion_Matrix B9](https://i.imgur.com/RIYpxvo.png)
 
 ## Requirements
 - Python >= 3.12.3
@@ -138,6 +252,7 @@ To train a specific baseline model, execute the corresponding script:
    python scripts/train_baseline6.py
    python scripts/train_baseline7.py
    python scripts/train_baseline8.py
+   python scripts/train_baseline9.py
    ```
 
 ### Configuration
@@ -148,41 +263,3 @@ Evaluation is performed automatically after training. Results include metrics li
 
 ### Logging and Outputs
 Logs and model outputs are organized into timestamped folders within the `runs/` directory for easy tracking of experiments.
-
-## Features
-- **Multiple Baselines**: Baseline1, Baseline3, Baseline4, Baseline5, Baseline6, Baseline7, and Baseline8.
-- **Configurable Parameters**: YAML-based configuration for easy adjustments.
-- **Early Stopping**: Built-in mechanism to halt training if no improvement is observed.
-- **Metric Visualization**: Includes confusion matrices and classification reports.
-- **Scalable Design**: Modular structure for future expansion and maintainability.
-
-## Improvements and Results
-**Differences from the Original Paper**
-
-This project introduces several updates and refinements over the original work:
-
- 1. Improved Baselines: Updated baseline implementations with better network architectures, e.g., using ResNet50 instead of AlexNet.
-
- 2. Refined Temporal Representations: Incorporates more temporal frames (5 before and 4 after target frame).
-
- 3. Enhanced Group Representations: Applies pooling mechanisms separately for each team to reduce confusion between team activities.
-
- 4. Modern Framework: Re-implemented in PyTorch with flexible configuration handling via YAML.
-### Accuracy and Improvement Over the Paper
-Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
-
-| Baseline                  | Accuracy (Paper) | Accuracy (Our Implementation) |
-|---------------------------|------------------|-------------------------------|
-| B1-Image Classification | 66.7%            | 78%                           |
-| B3-Fine-tuned Person Classification | 68.1%            | 76%                           |
-| B4-Temporal Model with Image Features | 63.1%            | 80%                           |
-| B5-Temporal Model with Person Features | 67.6%            | 88%                           |
-| B6-Two-stage Model without LSTM 1 | 74.7%            | 81%                           |
-| B7-Two-stage Model without LSTM 2 | 80.2%            | 88%                           |
-| Our Two-stage Hierarchical Model | 81.9%            | 93%                           |
-
-
-## Contributions
-We welcome contributions! Feel free to open issues or submit pull requests for bug fixes or enhancements.
-
-
