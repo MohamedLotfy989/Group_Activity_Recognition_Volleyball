@@ -9,6 +9,8 @@
   - [Dataset Labels](#dataset-labels)
   - [Dataset Splits](#dataset-splits)
 - [Project Structure](#project-structure)
+- [Features](#features)
+- [Baseline Descriptionss](#baselines-description)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -16,7 +18,6 @@
   - [Configuration](#configuration)
   - [Evaluation](#evaluation)
   - [Logging and Outputs](#logging-and-outputs)
-- [Features](#features)
 
 ## Overview
 This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, evaluation, and metric visualization. Based on the seminal paper ["CVPR 2016"](http://arxiv.org/pdf/1607.02643v1.pdf), "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim, this project explores hierarchical LSTM-based architectures for understanding individual actions and group activities.
