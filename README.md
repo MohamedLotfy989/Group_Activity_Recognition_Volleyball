@@ -177,7 +177,7 @@ Below is a table comparing the accuracy of various baselines as reported in the 
 | B3-Fine-tuned Person Classification | 68.1%            | 76%                           |
 | B4-Temporal Model with Image Features | 63.1%            | 80%                           |
 | B5-Temporal Model with Person Features | 67.6%            | 88%                           |
-| B6-Two-stage Model without LSTM 1 | 74.7%            | 74%                           |
+| B6-Two-stage Model without LSTM 1 | 74.7%            | 81%                           |
 | B7-Two-stage Model without LSTM 2 | 80.2%            | 88%                           |
 | Our Two-stage Hierarchical Model | 81.9%            | 93%                           |
 
