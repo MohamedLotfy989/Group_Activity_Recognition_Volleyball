@@ -23,20 +23,11 @@ class Baseline6(nn.Module):
         )
 
     def forward(self, x):
-        # x shape: (batch_size, num_frames, num_players, feature_dim)
-        batch_size, num_frames, num_players, feature_dim = x.size()
 
-        # Reshape input for player-level pooling
-        x = x.view(batch_size * num_frames, num_players, feature_dim)
-
-        # Pool player features to a single representation per frame
-        frame_rep = self.pool(x.permute(0, 2, 1)).squeeze(-1)  # Shape: (batch_size * num_frames, feature_dim)
-
-        # Reshape for frame-level LSTM
-        frame_rep = frame_rep.view(batch_size, num_frames, -1)  # Shape: (batch_size, num_frames, feature_dim)
+        x, _ = x[:, :, :6, :].max(axis=2)  # max over players
 
         # Process frames with frame-level LSTM
-        _, (h_n, _) = self.lstm_frame(frame_rep)  # Output shape: (batch_size, num_frames, hidden_size_frame)
+        _, (h_n, _) = self.lstm_frame(x)  # Output shape: (batch_size, num_frames, hidden_size_frame)
 
         # Use the last frame's representation for classification
         final_representation = h_n[-1]  # Shape: (batch_size, hidden_size_frame)
