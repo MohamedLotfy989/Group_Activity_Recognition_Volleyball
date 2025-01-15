@@ -212,6 +212,7 @@ Key Features:
 
 ### Baseline9 - Fine-Tuned Team Spatial Classification(No Temporal):(accuracy 92%)
 Fine-tunes individual player actions and then processes each team separately based on the spatial position of each player.A novel baseline that achieves high accuracy (92%) without the need for any temporal modeling.
+
 Key Features:
 - Fine-tunes models on individual player actions.
 - Separately processes each team based on spatial positions.
