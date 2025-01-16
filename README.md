@@ -6,12 +6,12 @@
 - [Overview](#overview)
 - [Improvements and Results](#improvements-and-results)
   - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
+- [Installation](#installation)
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
   - [Dataset Splits](#dataset-splits)
 - [Features](#features)
 - [Baseline Descriptions](#baseline-descriptions)
-- [Installation](#installation)
 - [Usage](#usage)
   - [Training](#training)
   - [Configuration](#configuration)
@@ -19,11 +19,12 @@
   - [Logging and Outputs](#logging-and-outputs)
 
 ## Overview
-This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, evaluation, and metric visualization. Based on the seminal paper ["CVPR 2016"](http://arxiv.org/pdf/1607.02643v1.pdf), "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim, this project explores hierarchical LSTM-based architectures for understanding individual actions and group activities.
+
+This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, evaluation, and metric visualization. Based on the seminal paper ["CVPR 2016"](http://arxiv.org/pdf/1607.02643v1.pdf), "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim, this project explores hierarchical LSTM-based architectures for understanding individual actions and group activities.You can find the original paper implementation by its owner at [this link](https://github.com/mostafa-saad/deep-activity-rec/tree/master).
+
 
 
 ## Improvements and Results
-**Differences from the Original Paper**
 
 This project introduces several updates and refinements over the original work:
 
@@ -34,10 +35,21 @@ This project introduces several updates and refinements over the original work:
  3. A new baseline(Baseline9) was introduced that achieved 92% accuracy without the need for a temporal model.
 
  4. Modern Framework: Re-implemented in PyTorch with flexible configuration handling via YAML.
+    
 ### Accuracy and Improvement Over the Paper
 Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
 
-<img src="https://i.imgur.com/rVDCsUD.png" alt="B8" width="50%">
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/rVDCsUD.png" alt="B8" width="50%">
+</div>
+
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball.git
+   cd Group_Activity_Recognition_Volleyball
+   ```
 
 
 ## Dataset
@@ -46,7 +58,8 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 - **Frames**: 4830 annotated frames, each with bounding boxes around players and labels for both individual actions and group activities.
 
 ### Dataset Labels
-#### Group Activity Classes
+
+#### Group Activity Classes  
 | Class            | Instances |
 |------------------|-----------|
 | Right set        | 644       |
@@ -78,9 +91,9 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 
 ### Dataset Sample
 
-<img src="https://i.imgur.com/DUhaofS.gif" alt="B8" width="75%">
-The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
+<img  src="https://i.imgur.com/DUhaofS.gif" alt="B8" width="75%">
 
+The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
 
 ## Features
 - **Multiple Baselines**: Baseline1, Baseline3, Baseline4, Baseline5, Baseline6, Baseline7,Baseline8, and Baseline9.
@@ -145,7 +158,10 @@ Key Features:
 - Scene-level LSTM aggregates features for the entire scene.
 - Outputs group activity predictions based on hierarchical features.
 
-<img src="https://i.imgur.com/ZNYcthV.jpg" alt="B8" width="50%">
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/ZNYcthV.jpg" alt="B8" style="display:inline-block; width:45%; height:300px; margin-right:2%;">
+  <img src="https://i.imgur.com/7yyWR3i.png" alt="B8" style="display:inline-block; width:45%; height:300px;">
+</div>
 
 <img src="https://i.imgur.com/VmKiOO3.png" alt="B8" width="75%">
 
@@ -161,17 +177,6 @@ Key Features:
 <img src="https://i.imgur.com/RIYpxvo.png" alt="B8" width="75%">
 
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball.git
-   cd Group_Activity_Recognition_Volleyball
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 ## Usage
 
