@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Improvements and Results](#improvements-and-results)
+- [Improvements and Updates](#improvements-and-updates)
   - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
 - [Installation](#installation)
 - [Dataset](#dataset)
@@ -24,7 +24,7 @@ This project leverages deep learning to classify volleyball activities using bot
 
 
 
-## Improvements and Results
+## Improvements and Updates
 
 This project introduces several updates and refinements over the original work:
 
@@ -64,7 +64,10 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
     <img src="https://i.imgur.com/XURLkKZ.png" alt="B8" style=" width:35%; height:550px;">
 </div>
 
-
+### Dataset Splits
+  - Training Set: 2/3 of the videos.
+  - Validation Set: 15 videos.
+  - Test Set: 1/3 of the videos.
 
 ### Dataset Sample
 
@@ -140,7 +143,7 @@ Key Features:
   <img src="https://i.imgur.com/7yyWR3i.png" alt="B8" style="display:inline-block; width:45%; height:300px;">
 </div>
 
-<img src="https://i.imgur.com/VmKiOO3.png" alt="B8" width="75%">
+<img src="https://i.imgur.com/VmKiOO3.png" alt="B8">
 
 ### Baseline9 - Fine-Tuned Team Spatial Classification(No Temporal):(accuracy 92%)
 Fine-tunes individual player actions and then processes each team separately based on the spatial position of each player.A novel baseline that achieves high accuracy (92%) without the need for any temporal modeling.
@@ -149,9 +152,9 @@ Key Features:
 - Fine-tunes models on individual player actions.
 - Separately processes each team based on spatial positions.
    
-<img src="https://i.imgur.com/iMH2Vtq.png" alt="B8" width="50%">
+<img src="https://i.imgur.com/iMH2Vtq.png" alt="B9" width="50%">
 
-<img src="https://i.imgur.com/RIYpxvo.png" alt="B8" width="75%">
+<img src="https://i.imgur.com/RIYpxvo.png" alt="B9">
 
 
 
