@@ -200,7 +200,7 @@ Key Features:
 - Uses pooling mechanisms instead of temporal connections.
 - Focuses on aggregating spatial features across players.
 
-### Baseline7 - Two-Stage Model Without LSTM 2:(accuracy 88%)
+### Baseline7 - Two-Stage Model Without LSTM 2:(accuracy 89%)
 An enhanced version of Baseline6, with improved pooling and feature aggregation techniques.
 
 Key Features:
