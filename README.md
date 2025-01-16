@@ -9,10 +9,8 @@
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
   - [Dataset Splits](#dataset-splits)
-- [Project Structure](#project-structure)
 - [Features](#features)
 - [Baseline Descriptions](#baseline-descriptions)
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Training](#training)
@@ -39,7 +37,7 @@ This project introduces several updates and refinements over the original work:
 ### Accuracy and Improvement Over the Paper
 Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
 
-![Accuracy-and-Improvement-Over-thePaper](https://i.imgur.com/rVDCsUD.png)
+<img src="https://i.imgur.com/rVDCsUD.png" alt="B8" width="50%">
 
 
 ## Dataset
@@ -79,8 +77,8 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 - **Test Set**: 1/3 of the videos.
 
 ### Dataset Sample
-![Dataset Sample](https://i.imgur.com/DUhaofS.gif)
 
+<img src="https://i.imgur.com/DUhaofS.gif" alt="B8" width="75%">
 The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
 
 
@@ -146,8 +144,10 @@ Key Features:
 - Player-level LSTM processes temporal features of individual players.
 - Scene-level LSTM aggregates features for the entire scene.
 - Outputs group activity predictions based on hierarchical features.
-  
-![Confusion_Matrix B8](https://i.imgur.com/VmKiOO3.png)
+
+<img src="https://i.imgur.com/ZNYcthV.jpg" alt="B8" width="50%">
+
+<img src="https://i.imgur.com/VmKiOO3.png" alt="B8" width="75%">
 
 ### Baseline9 - Fine-Tuned Team Spatial Classification(No Temporal):(accuracy 92%)
 Fine-tunes individual player actions and then processes each team separately based on the spatial position of each player.A novel baseline that achieves high accuracy (92%) without the need for any temporal modeling.
@@ -155,9 +155,10 @@ Fine-tunes individual player actions and then processes each team separately bas
 Key Features:
 - Fine-tunes models on individual player actions.
 - Separately processes each team based on spatial positions.
-  
-![Confusion_Matrix B9](https://i.imgur.com/RIYpxvo.png)
+   
+<img src="https://i.imgur.com/iMH2Vtq.png" alt="B8" width="50%">
 
+<img src="https://i.imgur.com/RIYpxvo.png" alt="B8" width="75%">
 
 
 ## Installation
