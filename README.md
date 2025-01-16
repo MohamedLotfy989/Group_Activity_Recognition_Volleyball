@@ -1,5 +1,6 @@
-# Deep Learning Project for Volleyball Activity Recognition
+<h1 align="center">Deep Learning Project for Volleyball Activity Recognition</h1>
 
+<h2 align="center">An implementation of seminal CVPR 2016 paper: "A Hierarchical Deep Temporal Model for Group Activity Recognition."</h2>
 
 ## Table of Contents
 - [Overview](#overview)
@@ -38,16 +39,7 @@ This project introduces several updates and refinements over the original work:
 ### Accuracy and Improvement Over the Paper
 Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
 
-| Baseline                                  | Accuracy (Paper) | Accuracy (Our Implementation) |
-|-------------------------------------------|------------------|-------------------------------|
-| B1-Image Classification                   | 66.7%            | 78%                           |
-| B3-Fine-tuned Person Classification       | 68.1%            | 76%                           |
-| B4-Temporal Model with Image Features     | 63.1%            | 80%                           |
-| B5-Temporal Model with Person Features    | 67.6%            | 88%                           |
-| B6-Two-stage Model without LSTM 1         | 74.7%            | 81%                           |
-| B7-Two-stage Model without LSTM 2         | 80.2%            | 89%                           |
-| Our Two-stage Hierarchical Model          | 81.9%            | 93%                           |
-| B9-Fine-Tuned Team Spatial Classification | N/A              | 92%                           |
+![Accuracy-and-Improvement-Over-thePaper](https://i.imgur.com/rVDCsUD.png)
 
 
 ## Dataset
@@ -91,67 +83,7 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 
 The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
 
-## Project Structure
-```
-project_root/
-├── models/                  # All model definitions
-│   ├── baseline1.py
-│   ├── baseline3/
-│   │   ├── phase1_fine_tune.py
-│   │   ├── phase2_feature_extraction.py
-│   │   ├── phase3_group_activity.py
-│   │   └── __init__.py
-│   ├── baseline4.py
-│   ├── baseline5.py
-│   ├── baseline6.py
-│   ├── baseline7.py
-│   ├── baseline8.py
-│   ├── baseline9.py
-│   └── __init__.py
-├── data/                    # Data loaders and datasets
-│   ├── data_loader.py
-│   ├── boxinfo.py
-│   ├── volleyball_annot_loader.py
-│   └── __init__.py
-├── utils/                   # Utility functions
-│   ├── helper_utils.py
-│   ├── logger.py
-│   ├── eval_metrics_utils.py
-│   ├── utils.py
-│   └── __init__.py
-├── training/                # Training and evaluation logic
-│   ├── trainer.py
-│   ├── evaluator.py
-│   └── __init__.py
-├── configs/                 # Configurations for training
-│   ├── baseline1_config.yml
-│   ├── baseline3_feature_extraction_config.yml
-│   ├── baseline3_fine_tune_config.yml
-│   ├── baseline3_group_activity_config.yml
-│   ├── baseline4_config.yml
-│   ├── baseline5_config.yml
-│   ├── baseline6_config.yml
-│   ├── baseline7_config.yml
-│   ├── baseline8_config.yml
-│   ├── baseline9_config.yml
-├── scripts/                 # Entry point scripts
-│   ├── train_baseline1.py
-│   ├── train_baseline3/
-│   │   ├── train_phase_1_fine_tune.py
-│   │   ├── train_phase_2_feature_extraction.py
-│   │   ├── train_phase_3_group_classifier.py
-│   │   └── __init__.py
-│   ├── train_baseline4.py
-│   ├── train_baseline5.py
-│   ├── train_baseline6.py
-│   ├── train_baseline7.py
-│   ├── train_baseline8.py
-│   ├── train_baseline9.py
-│   └── __init__.py
-├── runs/                    # Outputs and saved models
-├── requirements.txt         # Dependencies
-└── README.md                # Project description
-```
+
 ## Features
 - **Multiple Baselines**: Baseline1, Baseline3, Baseline4, Baseline5, Baseline6, Baseline7,Baseline8, and Baseline9.
 - **Configurable Parameters**: YAML-based configuration for easy adjustments.
@@ -226,17 +158,7 @@ Key Features:
   
 ![Confusion_Matrix B9](https://i.imgur.com/RIYpxvo.png)
 
-## Requirements
-- Python >= 3.12.3
-- PyTorch >= 2.5.1
-- Torchvision >= 0.20.1
-- Matplotlib >= 3.10.0
-- Scikit-learn >= 1.6.1
-- tqdm >= 4.66.5
-- PyYAML >= 6.0.2
-- Pillow >= 11.1.0
-- NumPy >= 2.2.1
-- seaborn >= 0.13.2
+
 
 ## Installation
 1. Clone the repository:
