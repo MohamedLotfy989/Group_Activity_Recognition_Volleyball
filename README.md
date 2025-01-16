@@ -59,35 +59,12 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 
 ### Dataset Labels
 
-#### Group Activity Classes  
-| Class            | Instances |
-|------------------|-----------|
-| Right set        | 644       |
-| Right spike      | 623       |
-| Right pass       | 801       |
-| Right winpoint   | 295       |
-| Left winpoint    | 367       |
-| Left pass        | 826       |
-| Left spike       | 642       |
-| Left set         | 633       |
+<div style="text-align: center;">
+   <img src="https://i.imgur.com/xTiVRPU.png" alt="B8" style=" width:35%; height:550px;">
+    <img src="https://i.imgur.com/XURLkKZ.png" alt="B8" style=" width:35%; height:550px;">
+</div>
 
-#### Action Classes
-| Class       | Instances |
-|-------------|-----------|
-| Waiting     | 3601      |
-| Setting     | 1332      |
-| Digging     | 2333      |
-| Falling     | 1241      |
-| Spiking     | 1216      |
-| Blocking    | 2458      |
-| Jumping     | 341       |
-| Moving      | 5121      |
-| Standing    | 38696     |
 
-### Dataset Splits
-- **Training Set**: 2/3 of the videos.
-- **Validation Set**: 15 videos.
-- **Test Set**: 1/3 of the videos.
 
 ### Dataset Sample
 
