@@ -28,7 +28,7 @@
 
 | Paper        | Year | Original Paper | Implementation | Key Points                        |
 |--------------|------|----------------|----------------|-----------------------------------|
-| **CVPR 16**| 2016 | [Paper](https://arxiv.org/abs/1512.03385) | [Implementation](https://github.com) | Two-stage hierarchical LSTM for group activity recognition      |
+| **CVPR 16**| 2016 | [Paper](https://arxiv.org/abs/1512.03385) | [Implementation](https://github.com/mostafa-saad/deep-activity-rec/tree/master) | Two-stage hierarchical LSTM for group activity recognition      |
 
 
 ## Key Changes
