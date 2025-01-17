@@ -2,9 +2,13 @@
 
 <h2 align="center">An implementation of seminal CVPR 2016 paper: "A Hierarchical Deep Temporal Model for Group Activity Recognition."</h2>
 
+<p align="center">
+  <img src="https://i.imgur.com/rhQRxLb.png" alt="Volleyball Activities"  width="80%">
+  <img src="https://i.imgur.com/Ck6iA70.jpg" alt="Volleyball Activities"  style="width: 60%; height: 400px;">
+</p>
+
 ## Table of Contents
-- [Overview](#overview)
-- [Improvements and Updates](#improvements-and-updates)
+- [Key Changes](#key-changes)
   - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
 - [Installation](#installation)
 - [Dataset](#dataset)
@@ -18,15 +22,16 @@
   - [Evaluation](#evaluation)
   - [Logging and Outputs](#logging-and-outputs)
 
-## Overview
-
-This project leverages deep learning to classify volleyball activities using both temporal and spatial features. It provides multiple baseline models and supports functionalities such as training, evaluation, and metric visualization. Based on the seminal paper ["CVPR 2016"](http://arxiv.org/pdf/1607.02643v1.pdf), "A Hierarchical Deep Temporal Model for Group Activity Recognition" by Mostafa S. Ibrahim, this project explores hierarchical LSTM-based architectures for understanding individual actions and group activities.You can find the original paper implementation by its owner at [this link](https://github.com/mostafa-saad/deep-activity-rec/tree/master).
 
 
+## 📚 Implemented Papers
 
-## Improvements and Updates
+| Paper        | Year | Original Paper | Implementation | Key Points                        |
+|--------------|------|----------------|----------------|-----------------------------------|
+| **CVPR 16**| 2016 | [Paper](https://arxiv.org/abs/1512.03385) | [Implementation](https://github.com) | Two-stage hierarchical LSTM for group activity recognition      |
 
-This project introduces several updates and refinements over the original work:
+
+## Key Changes
 
  1. Improved Baselines: Updated baseline implementations with better network architectures, e.g., using ResNet50 instead of AlexNet.
 
@@ -34,14 +39,12 @@ This project introduces several updates and refinements over the original work:
 
  3. A new baseline(Baseline9) was introduced that achieved 92% accuracy without the need for a temporal model.
 
- 4. Modern Framework: Re-implemented in PyTorch with flexible configuration handling via YAML.
+ 4. Modern Framework: Re-implemented in PyTorch instead of Caffe.
     
-### Accuracy and Improvement Over the Paper
-Below is a table comparing the accuracy of various baselines as reported in the paper versus our implementation:
-
-<div style="text-align: center;">
-  <img src="https://i.imgur.com/rVDCsUD.png" alt="B8" width="50%">
-</div>
+## Accuracy and Improvement Over the Paper
+<p align="center">
+  <img src="https://i.imgur.com/rVDCsUD.png" width="50%">
+</p>
 
 
 ## Installation
@@ -70,8 +73,10 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
   - Test Set: 1/3 of the videos.
 
 ### Dataset Sample
+<p align="center">
 
 <img  src="https://i.imgur.com/DUhaofS.gif" alt="B8" width="75%">
+</p>
 
 The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
 
