@@ -24,7 +24,7 @@
 
 
 
-## 📚 Implemented Papers
+## 📚 Implemented Paper
 
 | Paper        | Year | Original Paper | Implementation | Key Points                        |
 |--------------|------|----------------|----------------|-----------------------------------|
