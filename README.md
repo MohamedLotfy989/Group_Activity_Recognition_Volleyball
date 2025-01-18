@@ -14,15 +14,16 @@
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
   - [Dataset Splits](#dataset-splits)
-- [Features](#features)
-- [Baseline Descriptions](#baseline-descriptions)
+- [Baselines Descriptions](#baselines-descriptions)
+  - [Baselines Insights](#baselines-insights)
+  - [Baselines Implementation Comparison](#baselines-implementation-comparison)
+- [Evaluation Metrics \& Observations](#evaluation-metrics--observations)
 - [Usage](#usage)
   - [Training](#training)
   - [Features and Checkpoints](#features-and-checkpoints)
   - [Configuration](#configuration)
   - [Evaluation](#evaluation)
   - [Logging and Outputs](#logging-and-outputs)
-
 
 
 ## 📚 Implemented Paper
@@ -142,9 +143,9 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
 - **Metric Visualization**: Includes confusion matrices and classification reports.
 - **Scalable Design**: Modular structure for future expansion and maintainability.
 
-## Baseline Descriptions
+## Baselines Descriptions
 
-### Baseline Insights
+### Baselines Insights
 #### **- B1 - Image Classification**
 - **Description:** Fine-tunes **ResNet50** on entire frames classification without temporal information.
 
