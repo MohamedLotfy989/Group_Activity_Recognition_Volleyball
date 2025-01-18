@@ -45,16 +45,18 @@
 ## Accuracy and Improvement Over the Paper
 <p align="center">
   
-  | Baseline                  | Accuracy (Paper) | Accuracy (Our Implementation) |
-  |---------------------------|------------------|-------------------------------|
-  | B1-Image Classification | 66.7%            | 78%                           |
-  | B3-Fine-tuned Person Classification | 68.1%            | 76%                           |
-  | B4-Temporal Model with Image Features | 63.1%            | 80%                           |
-  | B5-Temporal Model with Person Features | 67.6%            | 88%                           |
-  | B6-Two-stage Model without LSTM 1 | 74.7%            | 81%                           |
-  | B7-Two-stage Model without LSTM 2 | 80.2%            | 89.20%                           |
-  | Our Two-stage Hierarchical Model | 81.9%            | 93%                           |
-  | B9-Fine-Tuned Team Spatial Classification | N/A           | 92%                           |
+ | Baseline                                  | Accuracy (Paper) | Accuracy (Our Implementation) |
+|-------------------------------------------|------------------|-------------------------------|
+| B1-Image Classification                   | 66.7%            | 78%                           |
+| B2-Person Classification                  | 64.6%            | skipped                       |
+| B3-Fine-tuned Person Classification       | 68.1%            | 76%                           |
+| B4-Temporal Model with Image Features     | 63.1%            | 81%                           |
+| B5-Temporal Model with Person Features    | 67.6%            | skipped                       |
+| B6-Two-stage Model without LSTM 1         | 74.7%            | 81%                           |
+| B7-Two-stage Model without LSTM 2         | 80.2%            | 88%                           |
+| B8-Two-stage Hierarchical Model(1 group)  | 70.3%            | 89.2%                         |
+| B8-Two-stage Hierarchical Model(2 groups) | 81.9%            | 93%                           |
+| B9-Fine-Tuned Team Spatial Classification | New-Baseline     | 92%                           |
 
 </p>
 
@@ -142,79 +144,155 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
 
 ## Baseline Descriptions
 
-### Baseline1 - Image Classification:(accuracy 78%)
-This baseline classifies group activities using only spatial features extracted from a single frame of the scene.
+### Baseline Insights
+#### **- B1 - Image Classification**
+- **Description:** Fine-tunes **ResNet50** on entire frames classification without temporal information.
 
-Key Features:
-- No temporal information is considered.
-- The entire frame is treated as a single entity for classification.
+- **Insights:** Works well for static image classification but lacks sequential understanding.
 
-### Baseline3 - Fine-Tuned Person Classification:(accuracy 76%)
-Fine-tunes a pre-trained network to classify individual actions from cropped player images.
+- **Key Features:** Frame-level classification, no temporal context.
 
-Key Features:
-- Focuses on learning individual player actions.
-- Uses person crops extracted from frames with bounding box annotations.
-Steps:
-- Phase 1: Fine-tune the model on individual player crops.
-- Phase 2: Extract features for players in each frame.
-- Phase 3: Max pool the extracted feature over players and classify group activities.
+#### **- B3 - Fine-tuned Person Classification**
+- **Description:** Fine-tunes **ResNet50** on person classification before extracting and pooling features for group activity recognition.
 
-### Baseline4 - Temporal Model with Image Features:(accuracy 80%)
-Incorporates temporal modeling by processing sequential frames to predict group activities.
+- **Insights:**  classification by focusing on individual actions but still lacks temporal modeling.
 
-Key Features:
-- Uses full-frame features from consecutive frames.
-- Employs an LSTM to capture temporal dependencies.
+- **Key Features:** Person-level classification, pooled feature extraction.
 
-### Baseline5 - Temporal Model with Person Features:(accuracy 88%)
-Models temporal dependencies using features extracted from individual player crops over time.
+#### **- B4 - Temporal Model with Image Features**
+- **Description:** Introduces LSTM for temporal modeling while still relying on image-level features.
 
-Key Features:
-- Processes person-level features with temporal modeling.
-- Combines individual actions to predict group activities.
+- **Insights:** Adds sequential understanding but lacks structured representation of players.
 
-### Baseline6 - Two-Stage Model Without LSTM 1:(accuracy 81%)
-A two-stage hierarchical model that avoids LSTMs for temporal modeling.
+- **Key Features:** LSTM for temporal learning, image-based feature extraction.
 
-Key Features:
-- Uses pooling mechanisms instead of temporal connections.
-- Focuses on aggregating spatial features across players.
+#### **- B6 - Two-stage Model without LSTM 1**
+- **Description:** Removes the person-level LSTM while keeping scene-level lstm modeling but relying on person-level features.
 
-### Baseline7 - Two-Stage Model Without LSTM 2:(accuracy 89%)
-An enhanced version of Baseline6, with improved pooling and feature aggregation techniques.
+- **Insights:** Scene-level modeling helps understand global activity but loses fine-grained player-level details.
 
-Key Features:
-- Employs adaptive pooling for team-level feature aggregation.
-- Provides better representation for group activities.
+- **Key Features:** Scene-level LSTM, no player-level temporal learning, person-based feature extraction.
 
-### Baseline8 - Two-Stage Hierarchical Model:(accuracy 93%)
-A hierarchical model that combines player-level and scene-level representations using LSTMs.
+#### **- B7 - Two-stage Model without LSTM 2**
+- **Description:** Removes the scene-level LSTM but keeps player-level LSTM.
 
-Key Features:
-- Player-level LSTM processes temporal features of individual players.
-- Scene-level LSTM aggregates features for the entire scene.
-- Outputs group activity predictions based on hierarchical features.
+ **Insights:** Retains individual player dynamics but struggles with global activity understanding.
+
+- **Key Features:** Player-level LSTM, no scene-level temporal modeling.
+
+#### **- B8 - Two-stage Hierarchical Model**
+- **Description:** Uses both player-level and scene-level LSTMs for hierarchical temporal modeling.
+
+- **Insights:** Effectively captures both individual and group dynamics.
+
+- **Key Features:** Hierarchical LSTM architecture, structured team dynamics.
+<div style="text-align: center;">
+   <img src="https://i.imgur.com/qm8QCPa.png" alt="B9" style="display:inline-block; width:45%; height:400px;">
+</div>
+
+#### **- B8 - Two-stage Hierarchical Model with Team Pooling**
+- **Description:** Adds team-wise pooling before applying scene-level LSTM.
+
+- **Insights:** Reduces confusion between left and right teams, improving classification.
+
+- **Key Features:** Team-wise pooling, hierarchical scene modeling.
 
 <div style="text-align: center;">
   <img src="https://i.imgur.com/ZNYcthV.jpg" alt="B8" style="display:inline-block; width:45%; height:300px; margin-right:2%;">
   <img src="https://i.imgur.com/7yyWR3i.png" alt="B8" style="display:inline-block; width:45%; height:300px;">
 </div>
 
-<img src="https://i.imgur.com/VmKiOO3.png" alt="B8">
+#### **- B9 - Fine-Tuned Team Spatial Classification**
+- **Description:** Fine-tunes ResNet50 on individual player actions before pooling team representations.
 
-### Baseline9 - Fine-Tuned Team Spatial Classification(No Temporal):(accuracy 92%)
-Fine-tunes individual player actions and then processes each team separately based on the spatial position of each player.A novel baseline that achieves high accuracy (92%) without the need for any temporal modeling.
+- **Insights:** Achieves state-of-the-art accuracy by leveraging fine-grained person representations.
 
-Key Features:
-- Fine-tunes models on individual player actions.
-- Separately processes each team based on spatial positions.
-   
-<img src="https://i.imgur.com/iMH2Vtq.png" alt="B9" width="50%">
+- **Key Features:** ResNet50-based person classification, Team-wise pooling, optimized scene classification.
 
-<img src="https://i.imgur.com/RIYpxvo.png" alt="B9">
+<img src="https://i.imgur.com/iMH2Vtq.png" alt="B9" width="45%">
 
+### Baselines Implementation Comparison
 
+#### Overview
+This table outlines the progression of different baseline models, highlighting their implementation improvements and accuracy as measured in our implementation.
+
+| **Baseline Model**                                      | **Baselines Implementation**                                                                                                                                                                   | **Accuracy (Our Implementation)** |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| **B1 - Image Classification**                           | Fine-tune ResNet50 On **Image Level** →   Classify group activity.                                                                                                                                          | 78%                               |
+| **B3 - B2-Person Classification**                       | Extract person features(ResNet50 without Fine-tune) → Pool features over players → Classify group activity. I **passed** this baseline because it **doesn't** fine-tune.                                    | N/A                               |
+| **B3 - Fine-tuned Person Classification**               | Fine-tune ResNet50 on **Cropped Person Actions** → Extract features → Pool features over players → Classify group activity.                                                                                 | 76%                               |
+| **B4 - Temporal Model with Image Features**             | Based on B1 → Extract image features → Apply LSTM for temporal modeling → Classify group activity.                                                                                                          | 80%                               |
+| **B5 - Temporal Model with Person Features**            | Based on B2 → Apply LSTM for player-level modeling → Pool features → Classify group activity. I **passed** this baseline since I passed B2, and same idea applied in **B7**                                 | N/A                               |
+| **B6 - Two-stage Model without LSTM 1**                 | Based on B3 → Extract person features → Pool features → Apply LSTM for **scene-level** modeling → Classify group activity.                                                                                  | 81%                               |
+| **B7 - Two-stage Model without LSTM 2**                 | Based on B3 → Extract person features → Apply LSTM for **player-level** modeling → Pool features → Classify group activity.                                                                                 | 88%                               |
+| **B8 - Two-stage Hierarchical Model**                   | Based on B3 → Extract person features → Apply LSTM for **player-level** modeling → Pool features over players → Apply LSTM for **scene-level** modeling → Classify group activity.                          | 89.20%                            |
+| **B8 - Two-stage Hierarchical Model with Team Pooling** | Based on B7 → Extract person features → Apply LSTM for **player-level modeling** → Pool features **per team** → Concatenate Both Teams → Apply LSTM for **scene-level** modeling → Classify group activity. | 93%                               |
+| **B9 - Fine-Tuned Team Spatial Classification**         | Fine-tune ResNet50 on **Cropped Person Actions** → Extract player features → Pool features **per team** → Classify group activity.                                                                          | 92%                               |
+
+#### Key Takeaways
+- **Baseline 1 → 3**: Early models focus on frame-based CNN classification before shifting to person-level classification.
+- **Baseline 4 → 5**: Introduces LSTM-based temporal modeling for both image and player-level features.
+- **Baseline 6 → 7**: Evaluates the effects of removing person-level or scene-level LSTMs.
+- **Baseline 8 → 9**: Moves toward hierarchical team-aware pooling and an end-to-end structured classification approach.
+
+## Evaluation Metrics & Observations
+### **Baseline 6 - Two-stage Model without LSTM 1**
+**Accuracy: ~81%**
+
+<img src="https://i.imgur.com/E5RlSbQ.png" alt="B6" width="45%">
+
+- **L-set and r-set recognition** reached 92% recall, benefiting from scene-level representations.
+- **Pass actions** remain a weak point (r-pass at 65% recall), showing that removing person-level LSTM impacts individual action recognition.
+- **Balanced macro and weighted accuracy scores**, indicating overall improvement in scene-level understanding.
+- **R-winpoint performance** jumped to 83% recall, meaning the model is now effectively distinguishing game-ending actions.
+
+### **Baseline 7 - Two-stage Model without LSTM 2**
+**Accuracy: ~88%**
+
+<img src="https://i.imgur.com/haLwxlr.png" alt="B7" width="45%">
+
+- **Pass recognition significantly improved** (l-pass: 96%, r-pass: 90% recall) compared to earlier baselines.
+- **Spike actions remain highly distinguishable** (l-spike: 89%, r-spike: 90%), indicating robust temporal modeling.
+- **Winpoint actions are weaker** (l_winpoint: 79%, r_winpoint: 64%), suggesting some confusion in game-ending states.
+- **Strong macro and weighted averages (~88%)**, proving that hierarchical structure helps even without scene-level LSTM.
+
+### **Baseline 8 - Two-stage Hierarchical Model**
+**Accuracy: ~89%**
+
+<img src="https://i.imgur.com/pPcMfLe.png" alt="B8" width="45%">
+
+- **Pass actions maintain strong recognition** (r-pass: 94% recall), improving from B7.
+- **Winpoint classification improves** (l_winpoint: 77%, r_winpoint: 84%), reducing confusion in match-ending events.
+- **Balanced performance across all actions (~90% f1-score for most classes).**
+- **Team interactions are still not explicitly modeled, leaving room for improvement.**
+
+### **Baseline 8 - Two-stage Hierarchical Model with Team Pooling**
+**Accuracy: ~93%**
+
+<img src="https://i.imgur.com/T9H496B.png" alt="B8" width="45%">
+
+- **Highest overall performance so far, with a macro average of 93%.**
+- **Team-aware pooling significantly improves winpoint actions** (l_winpoint: 92%, r_winpoint: 93%).
+- **Better precision-recall balance across all activity classes.**
+- **Spike and pass actions remain dominant at 92–96% accuracy, indicating the success of structured representation.**
+- **Minimal misclassification, highlighting the model’s strong team-aware learning.**
+
+### **Baseline 9 - Fine-Tuned Team Spatial Classification**
+**Accuracy: ~92%**
+
+<img src="https://i.imgur.com/kukuA8R.png" alt="B8" width="45%">
+
+- **Very close to B8 with Team Pooling in overall performance (92%).**
+- **Winpoint recognition is the strongest** (l_winpoint: 94%, r_winpoint: 95%), showing optimal game state classification.
+- **Pass and spike actions maintain high precision and recall, ensuring smooth team-based action understanding.**
+- **Final structured hierarchical learning approach proves highly effective, confirming the best possible performance.**
+
+## **Key Takeaways**
+1. **Pass action recognition improves consistently**, peaking at ~96% recall in B8 with Team Pooling.
+2. **Winpoint classification struggles in early models but reaches 95% in B9**, proving the importance of structured team representation.
+3. **Spiking actions remain robust across all baselines**, with minor refinements from B7 onward.
+4. **Hierarchical modeling (B8 and B9) yields the best results**, demonstrating the effectiveness of structured feature learning.
+5. **Team pooling (B8 with team separation) plays a crucial role** in reducing left/right confusion and boosting final performance.
 
 ## Usage
 
