@@ -177,7 +177,7 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
 #### **- B7 - Two-stage Model without LSTM 2**
 - **Description:** Removes the scene-level LSTM but keeps player-level LSTM.
 
- **Insights:** Retains individual player dynamics but struggles with global activity understanding.
+- **Insights:** Retains individual player dynamics but struggles with global activity understanding.
 
 - **Key Features:** Player-level LSTM, no scene-level temporal modeling.
 
