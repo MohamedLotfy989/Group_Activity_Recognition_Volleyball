@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://i.imgur.com/rhQRxLb.png" alt="Volleyball Activities"  width="80%">
-  <img src="https://i.imgur.com/Ck6iA70.jpg" alt="Volleyball Activities"  style="width: 60%; height: 400px;">
+  <img src="https://i.imgur.com/CnDLcFK.jpg" alt="Volleyball Activities"  width="65%">
 </p>
 
 ## Table of Contents
