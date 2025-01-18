@@ -237,58 +237,58 @@ This table outlines the progression of different baseline models, highlighting t
 - **Baseline 8 → 9**: Moves toward hierarchical team-aware pooling and an end-to-end structured classification approach.
 
 ## Evaluation Metrics & Observations
-### **Baseline 6 - Two-stage Model without LSTM 1**
+####  **Baseline 6 - Two-stage Model without LSTM 1**
 **Accuracy: ~81%**
 
 <img src="https://i.imgur.com/E5RlSbQ.png" alt="B6" width="45%">
 
-- **L-set and r-set recognition** reached 92% recall, benefiting from scene-level representations.
-- **Pass actions** remain a weak point (r-pass at 65% recall), showing that removing person-level LSTM impacts individual action recognition.
-- **Balanced macro and weighted accuracy scores**, indicating overall improvement in scene-level understanding.
-- **R-winpoint performance** jumped to 83% recall, meaning the model is now effectively distinguishing game-ending actions.
+  - **L-set and r-set recognition** reached 92% recall, benefiting from scene-level representations.
+  - **Pass actions** remain a weak point (r-pass at 65% recall), showing that removing person-level LSTM impacts individual action recognition.
+  - **Balanced macro and weighted accuracy scores**, indicating overall improvement in scene-level understanding.
+  - **R-winpoint performance** jumped to 83% recall, meaning the model is now effectively distinguishing game-ending actions.
 
-### **Baseline 7 - Two-stage Model without LSTM 2**
+####  **Baseline 7 - Two-stage Model without LSTM 2**
 **Accuracy: ~88%**
 
 <img src="https://i.imgur.com/haLwxlr.png" alt="B7" width="45%">
 
-- **Pass recognition significantly improved** (l-pass: 96%, r-pass: 90% recall) compared to earlier baselines.
-- **Spike actions remain highly distinguishable** (l-spike: 89%, r-spike: 90%), indicating robust temporal modeling.
-- **Winpoint actions are weaker** (l_winpoint: 79%, r_winpoint: 64%), suggesting some confusion in game-ending states.
-- **Strong macro and weighted averages (~88%)**, proving that hierarchical structure helps even without scene-level LSTM.
+  - **Pass recognition significantly improved** (l-pass: 96%, r-pass: 90% recall) compared to earlier baselines.
+  - **Spike actions remain highly distinguishable** (l-spike: 89%, r-spike: 90%), indicating robust temporal modeling.
+  - **Winpoint actions are weaker** (l_winpoint: 79%, r_winpoint: 64%), suggesting some confusion in game-ending states.
+  - **Strong macro and weighted averages (~88%)**, proving that hierarchical structure helps even without scene-level LSTM.
 
-### **Baseline 8 - Two-stage Hierarchical Model**
+#### **Baseline 8 - Two-stage Hierarchical Model**
 **Accuracy: ~89%**
 
 <img src="https://i.imgur.com/pPcMfLe.png" alt="B8" width="45%">
 
-- **Pass actions maintain strong recognition** (r-pass: 94% recall), improving from B7.
-- **Winpoint classification improves** (l_winpoint: 77%, r_winpoint: 84%), reducing confusion in match-ending events.
-- **Balanced performance across all actions (~90% f1-score for most classes).**
-- **Team interactions are still not explicitly modeled, leaving room for improvement.**
+  - **Pass actions maintain strong recognition** (r-pass: 94% recall), improving from B7.
+  - **Winpoint classification improves** (l_winpoint: 77%, r_winpoint: 84%), reducing confusion in match-ending events.
+  - **Balanced performance across all actions (~90% f1-score for most classes).**
+  - **Team interactions are still not explicitly modeled, leaving room for improvement.**
 
-### **Baseline 8 - Two-stage Hierarchical Model with Team Pooling**
+####  **Baseline 8 - Two-stage Hierarchical Model with Team Pooling**
 **Accuracy: ~93%**
 
 <img src="https://i.imgur.com/T9H496B.png" alt="B8" width="45%">
 
-- **Highest overall performance so far, with a macro average of 93%.**
-- **Team-aware pooling significantly improves winpoint actions** (l_winpoint: 92%, r_winpoint: 93%).
-- **Better precision-recall balance across all activity classes.**
-- **Spike and pass actions remain dominant at 92–96% accuracy, indicating the success of structured representation.**
-- **Minimal misclassification, highlighting the model’s strong team-aware learning.**
+  - **Highest overall performance so far, with a macro average of 93%.**
+  - **Team-aware pooling significantly improves winpoint actions** (l_winpoint: 92%, r_winpoint: 93%).
+  - **Better precision-recall balance across all activity classes.**
+  - **Spike and pass actions remain dominant at 92–96% accuracy, indicating the success of structured representation.**
+  - **Minimal misclassification, highlighting the model’s strong team-aware learning.**
 
-### **Baseline 9 - Fine-Tuned Team Spatial Classification**
+####  **Baseline 9 - Fine-Tuned Team Spatial Classification**
 **Accuracy: ~92%**
 
 <img src="https://i.imgur.com/kukuA8R.png" alt="B8" width="45%">
 
-- **Very close to B8 with Team Pooling in overall performance (92%).**
-- **Winpoint recognition is the strongest** (l_winpoint: 94%, r_winpoint: 95%), showing optimal game state classification.
-- **Pass and spike actions maintain high precision and recall, ensuring smooth team-based action understanding.**
-- **Final structured hierarchical learning approach proves highly effective, confirming the best possible performance.**
+  - **Very close to B8 with Team Pooling in overall performance (92%).**
+  - **Winpoint recognition is the strongest** (l_winpoint: 94%, r_winpoint: 95%), showing optimal game state classification.
+  - **Pass and spike actions maintain high precision and recall, ensuring smooth team-based action understanding.**
+  - **Final structured hierarchical learning approach proves highly effective, confirming the best possible performance.**
 
-## **Key Takeaways**
+### **Key Takeaways**
 1. **Pass action recognition improves consistently**, peaking at ~96% recall in B8 with Team Pooling.
 2. **Winpoint classification struggles in early models but reaches 95% in B9**, proving the importance of structured team representation.
 3. **Spiking actions remain robust across all baselines**, with minor refinements from B7 onward.
