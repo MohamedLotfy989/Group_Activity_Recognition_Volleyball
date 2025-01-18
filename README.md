@@ -18,6 +18,7 @@
 - [Baseline Descriptions](#baseline-descriptions)
 - [Usage](#usage)
   - [Training](#training)
+  - [Features and Checkpoints](#features-and-checkpoints)
   - [Configuration](#configuration)
   - [Evaluation](#evaluation)
   - [Logging and Outputs](#logging-and-outputs)
@@ -60,10 +61,15 @@
 
 ## Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball.git
-   cd Group_Activity_Recognition_Volleyball
-   ```
+    ```bash
+    git clone https://github.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball.git
+    cd Group_Activity_Recognition_Volleyball
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 
 ## Dataset
@@ -226,6 +232,8 @@ To train a specific baseline model, execute the corresponding script:
    python scripts/train_baseline8.py
    python scripts/train_baseline9.py
    ```
+### Features and Checkpoints
+You can download the features and checkpoints from [here](https://drive.google.com/drive/folders/1G2DlJhEeKMi6pvXbY1mG5p8PET0jXZwn?usp=drive_link).
 
 ### Configuration
 Model configurations are stored in the `configs/` directory. Adjust parameters such as learning rate, batch size, and number of epochs by editing the relevant `.yml` file.
