@@ -21,3 +21,4 @@ pin_memory: true
 save_dir: ./runs/baseline3/phase2_feature_extraction/features
 seed: 42
 use_all_frames: true
+
