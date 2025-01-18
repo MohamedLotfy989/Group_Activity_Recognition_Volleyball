@@ -43,7 +43,18 @@
     
 ## Accuracy and Improvement Over the Paper
 <p align="center">
-  <img src="https://i.imgur.com/rVDCsUD.png" width="50%">
+  
+  | Baseline                  | Accuracy (Paper) | Accuracy (Our Implementation) |
+  |---------------------------|------------------|-------------------------------|
+  | B1-Image Classification | 66.7%            | 78%                           |
+  | B3-Fine-tuned Person Classification | 68.1%            | 76%                           |
+  | B4-Temporal Model with Image Features | 63.1%            | 80%                           |
+  | B5-Temporal Model with Person Features | 67.6%            | 88%                           |
+  | B6-Two-stage Model without LSTM 1 | 74.7%            | 81%                           |
+  | B7-Two-stage Model without LSTM 2 | 80.2%            | 89.20%                           |
+  | Our Two-stage Hierarchical Model | 81.9%            | 93%                           |
+  | B9-Fine-Tuned Team Spatial Classification | N/A           | 92%                           |
+
 </p>
 
 
@@ -62,10 +73,46 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 
 ### Dataset Labels
 
-<div style="text-align: center;">
-   <img src="https://i.imgur.com/xTiVRPU.png" alt="B8" style=" width:35%; height:550px;">
-    <img src="https://i.imgur.com/XURLkKZ.png" alt="B8" style=" width:35%; height:550px;">
-</div>
+<table>
+  <tr>
+    <!-- We ensure each cell is top-aligned -->
+    <td valign="top">
+
+#### Group Activity Classes
+
+| Class          | Instances |
+|----------------|-----------|
+| Right set      | 644       |
+| Right spike    | 623       |
+| Right pass     | 801       |
+| Right winpoint | 295       |
+| Left winpoint  | 367       |
+| Left pass      | 826       |
+| Left spike     | 642       |
+| Left set       | 633       |
+
+</td>
+    <td valign="top">
+
+#### Action Classes
+
+| Class    | Instances |
+|----------|-----------|
+| Waiting  | 3601      |
+| Setting  | 1332      |
+| Digging  | 2333      |
+| Falling  | 1241      |
+| Spiking  | 1216      |
+| Blocking | 2458      |
+| Jumping  | 341       |
+| Moving   | 5121      |
+| Standing | 38696     |
+
+</td>
+  </tr>
+</table>
+
+
 
 ### Dataset Splits
   - Training Set: 2/3 of the videos.
