@@ -1,12 +1,12 @@
 import os
 from utils import load_config,set_seed
 from training import Trainer,Evaluator
-from models import Baseline8
+from models import Baseline8_v2
 from data import get_dataloader
 
 def main():
     # Load configuration from file
-    config_path = "/configs/baseline8_config.yml"
+    config_path = "/configs/baseline8_v2_config.yml"
     config = load_config(config_path)
 
     set_seed(config.seed)
@@ -44,7 +44,7 @@ def main():
 
 
     # Initialize model
-    model = Baseline8(
+    model = Baseline8_v2(
         input_size=config.input_size,
         hidden_size_player=config.hidden_size_player,
         hidden_size_frame=config.hidden_size_frame,
