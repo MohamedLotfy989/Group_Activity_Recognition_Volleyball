@@ -2,9 +2,9 @@ import torch.nn as nn
 
 
 
-class Baseline7(nn.Module):
+class Baseline8_v1(nn.Module):
     def __init__(self, input_size, hidden_size_player, hidden_size_frame, num_classes=8):
-        super(Baseline7, self).__init__()
+        super(Baseline8_v1, self).__init__()
         # LSTM for player-level temporal modeling
         self.player_lstm = nn.LSTM(
             input_size=input_size,  # Input feature size per player
