@@ -237,8 +237,7 @@ This table outlines the progression of different baseline models, highlighting t
 - **Baseline 8 → 9**: Moves toward hierarchical team-aware pooling and an end-to-end structured classification approach.
 
 ## Evaluation Metrics & Observations
-####  **Baseline 6 - Two-stage Model without LSTM 1**
-**Accuracy: ~81%**
+####  **Baseline 6 - Two-stage Model without LSTM 1** : (**Accuracy: ~81%**)
 
 <img src="https://i.imgur.com/E5RlSbQ.png" alt="B6" width="45%">
 
@@ -247,8 +246,7 @@ This table outlines the progression of different baseline models, highlighting t
   - **Balanced macro and weighted accuracy scores**, indicating overall improvement in scene-level understanding.
   - **R-winpoint performance** jumped to 83% recall, meaning the model is now effectively distinguishing game-ending actions.
 
-####  **Baseline 7 - Two-stage Model without LSTM 2**
-**Accuracy: ~88%**
+####  **Baseline 7 - Two-stage Model without LSTM 2** : (**Accuracy: ~88%**)
 
 <img src="https://i.imgur.com/haLwxlr.png" alt="B7" width="45%">
 
@@ -257,8 +255,7 @@ This table outlines the progression of different baseline models, highlighting t
   - **Winpoint actions are weaker** (l_winpoint: 79%, r_winpoint: 64%), suggesting some confusion in game-ending states.
   - **Strong macro and weighted averages (~88%)**, proving that hierarchical structure helps even without scene-level LSTM.
 
-#### **Baseline 8 - Two-stage Hierarchical Model**
-**Accuracy: ~89%**
+#### **Baseline 8 - Two-stage Hierarchical Model** : (**Accuracy: ~89%**)
 
 <img src="https://i.imgur.com/pPcMfLe.png" alt="B8" width="45%">
 
@@ -267,8 +264,7 @@ This table outlines the progression of different baseline models, highlighting t
   - **Balanced performance across all actions (~90% f1-score for most classes).**
   - **Team interactions are still not explicitly modeled, leaving room for improvement.**
 
-####  **Baseline 8 - Two-stage Hierarchical Model with Team Pooling**
-**Accuracy: ~93%**
+####  **Baseline 8 - Two-stage Hierarchical Model with Team Pooling** : (**Accuracy: ~93%**)
 
 <img src="https://i.imgur.com/T9H496B.png" alt="B8" width="45%">
 
@@ -278,8 +274,7 @@ This table outlines the progression of different baseline models, highlighting t
   - **Spike and pass actions remain dominant at 92–96% accuracy, indicating the success of structured representation.**
   - **Minimal misclassification, highlighting the model’s strong team-aware learning.**
 
-####  **Baseline 9 - Fine-Tuned Team Spatial Classification**
-**Accuracy: ~92%**
+####  **Baseline 9 - Fine-Tuned Team Spatial Classification** : (**Accuracy: ~92%**)
 
 <img src="https://i.imgur.com/kukuA8R.png" alt="B8" width="45%">
 
