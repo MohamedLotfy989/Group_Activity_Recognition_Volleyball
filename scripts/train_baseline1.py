@@ -9,6 +9,7 @@ def main():
     config_path = "/configs/baseline1_config.yml"
     config = load_config(config_path)
 
+
     # Set up save directory
     os.makedirs(config.save_dir, exist_ok=True)
     # Initialize data loaders
