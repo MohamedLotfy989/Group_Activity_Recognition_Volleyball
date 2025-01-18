@@ -1,5 +1,5 @@
 import os
-from models import Baseline5
+from models import Baseline7
 from utils import load_config,set_seed
 from training import Trainer,Evaluator
 from data import get_dataloader
@@ -7,7 +7,7 @@ from data import get_dataloader
 def main():
 
     # Load configuration from file
-    config_path = "/configs/baseline5_config.yml"
+    config_path = "/configs/baseline7_config.yml"
     config = load_config(config_path)
     set_seed(config.seed)
     # Set up save directory
@@ -42,7 +42,7 @@ def main():
     )
 
     # Initialize model
-    model = Baseline5(
+    model = Baseline7(
         input_size=config.input_size,
         hidden_size_player=config.hidden_size_player,
         num_classes=8
