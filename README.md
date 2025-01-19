@@ -125,8 +125,11 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 
 ### Dataset Splits
   - Training Set: 2/3 of the videos.
+    - Train Videos: 1, 3, 6, 7, 10, 13, 15, 16, 18, 22, 23, 31, 32, 36, 38, 39, 40, 41, 42, 48, 50, 52, 53, 54. 
   - Validation Set: 15 videos.
+    - Validation Videos: 0, 2, 8, 12, 17, 19, 24, 26, 27, 28, 30, 33, 46, 49, 51.
   - Test Set: 1/3 of the videos.
+    - Test Videos: 4, 5, 9, 11, 14, 20, 21, 25, 29, 34, 35, 37, 43, 44, 45, 47.
 
 ### Dataset Sample
 <p align="center">
