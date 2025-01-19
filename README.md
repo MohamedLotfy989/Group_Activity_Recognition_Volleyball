@@ -14,7 +14,7 @@
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
   - [Dataset Splits](#dataset-splits)
-- [Baselines Descriptions](#baselines-descriptions)
+- [Ablation Study](#ablation-study)
   - [Baselines Insights](#baselines-insights)
   - [Baselines Implementation Comparison](#baselines-implementation-comparison)
 - [Evaluation Metrics \& Observations](#evaluation-metrics--observations)
@@ -137,7 +137,7 @@ We used a volleyball dataset introduced in the aforementioned paper. The dataset
 <img  src="https://i.imgur.com/DUhaofS.gif" alt="B8" width="75%">
 </p>
 
-The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset).
+The dataset is available for download at [GitHub Deep Activity Rec](https://github.com/mostafa-saad/deep-activity-rec#dataset), or on Kaggle [here](https://www.kaggle.com/datasets/ahmedmohamed365/volleyball/data?select=volleyball_)
 
 ## Features
 - **Multiple Baselines**: Baseline1, Baseline3, Baseline4, Baseline5, Baseline6, Baseline7,Baseline8, and Baseline9.
@@ -146,7 +146,7 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
 - **Metric Visualization**: Includes confusion matrices and classification reports.
 - **Scalable Design**: Modular structure for future expansion and maintainability.
 
-## Baselines Descriptions
+## Ablation Study
 
 ### Baselines Insights
 #### **- B1 - Image Classification**
@@ -303,10 +303,10 @@ To train a specific baseline model, execute the corresponding script:
    python scripts/train_baseline3/train_phase_2_feature_extraction.py
    python scripts/train_baseline3/train_phase_3_group_classifier.py
    python scripts/train_baseline4.py
-   python scripts/train_baseline5.py
    python scripts/train_baseline6.py
    python scripts/train_baseline7.py
-   python scripts/train_baseline8.py
+   python scripts/train_baseline8_v1.py
+   python scripts/train_baseline8_v2.py
    python scripts/train_baseline9.py
    ```
 ### Features and Checkpoints
