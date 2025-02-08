@@ -10,6 +10,7 @@
 ## Table of Contents
 - [Key Changes](#key-changes)
   - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
+- [Key Takeaways](#key-takeaways)
 - [Installation](#installation)
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
@@ -28,7 +29,7 @@
 
 ## 📚 Implemented Paper
 
-| Paper        | Year | Original Paper | Implementation | Key Points                        |
+| Paper        | Year | Original Paper | Original Implementation | Key Points                        |
 |--------------|------|----------------|----------------|-----------------------------------|
 | **CVPR 16**| 2016 | [Paper](https://arxiv.org/pdf/1607.02643) | [Implementation](https://github.com/mostafa-saad/deep-activity-rec/tree/master) | Two-stage hierarchical LSTM for group activity recognition      |
 
@@ -61,6 +62,17 @@
 
 </p>
 
+## Key Takeaways
+1. **Higher Baseline Accuracy**: Significant improvements in baseline accuracy, achieving up to 93% compared to the original paper's 81.9%.
+2. **Modern Framework**: Re-implemented the model in PyTorch, offering a more modern and flexible framework compared to the original Caffe implementation.
+3. **New Baselines Introduced**: Added new baselines, such as Baseline9, which achieved 92% accuracy without a temporal model.
+4. **Comprehensive Ablation Study**: Detailed ablation study comparing various baselines, highlighting the strengths and weaknesses of different approaches.
+5. **Hierarchical Temporal Modeling**: Utilized a two-stage hierarchical LSTM to effectively capture both individual and group dynamics.
+6. **Team-Aware Pooling**: Implemented team-wise pooling to reduce confusion between left and right teams, improving classification performance.
+7. **Extensive Dataset**: Provided a comprehensive volleyball dataset with annotated frames, bounding boxes, and labels for individual and group activities.
+8. **Configurable Parameters**: YAML-based configuration for easy adjustment of model parameters.
+9. **Early Stopping and Visualization**: Built-in mechanisms for early stopping and metric visualization, including confusion matrices and classification reports.
+10. **Scalable and Modular Design**: Designed the project with a scalable and modular structure for easy expansion and maintainability.
 
 ## Installation
 1. Clone the repository:
@@ -149,42 +161,42 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
 ## Ablation Study
 
 ### Baselines Insights
-#### **- B1 - Image Classification**
+#### **B1 - Image Classification**
 - **Description:** Fine-tunes **ResNet50** on entire frames classification without temporal information.
 
 - **Insights:** Works well for static image classification but lacks sequential understanding.
 
 - **Key Features:** Frame-level classification, no temporal context.
 
-#### **- B3 - Fine-tuned Person Classification**
+#### **B3 - Fine-tuned Person Classification**
 - **Description:** Fine-tunes **ResNet50** on person classification before extracting and pooling features for group activity recognition.
 
 - **Insights:**  classification by focusing on individual actions but still lacks temporal modeling.
 
 - **Key Features:** Person-level classification, pooled feature extraction.
 
-#### **- B4 - Temporal Model with Image Features**
+#### **B4 - Temporal Model with Image Features**
 - **Description:** Introduces LSTM for temporal modeling while still relying on image-level features.
 
 - **Insights:** Adds sequential understanding but lacks structured representation of players.
 
 - **Key Features:** LSTM for temporal learning, image-based feature extraction.
 
-#### **- B6 - Two-stage Model without LSTM 1**
+#### **B6 - Two-stage Model without LSTM 1**
 - **Description:** Removes the person-level LSTM while keeping scene-level lstm modeling but relying on person-level features.
 
 - **Insights:** Scene-level modeling helps understand global activity but loses fine-grained player-level details.
 
 - **Key Features:** Scene-level LSTM, no player-level temporal learning, person-based feature extraction.
 
-#### **- B7 - Two-stage Model without LSTM 2**
+#### **B7 - Two-stage Model without LSTM 2**
 - **Description:** Removes the scene-level LSTM but keeps player-level LSTM.
 
 - **Insights:** Retains individual player dynamics but struggles with global activity understanding.
 
 - **Key Features:** Player-level LSTM, no scene-level temporal modeling.
 
-#### **- B8 - Two-stage Hierarchical Model**
+#### **B8 - Two-stage Hierarchical Model**
 - **Description:** Uses both player-level and scene-level LSTMs for hierarchical temporal modeling.
 
 - **Insights:** Effectively captures both individual and group dynamics.
@@ -194,7 +206,7 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
    <img src="https://i.imgur.com/qm8QCPa.png" alt="B9" style="display:inline-block; width:45%; height:400px;">
 </div>
 
-#### **- B8 - Two-stage Hierarchical Model with Team Pooling**
+#### **B8 - Two-stage Hierarchical Model with Team Pooling**
 - **Description:** Adds team-wise pooling before applying scene-level LSTM.
 
 - **Insights:** Reduces confusion between left and right teams, improving classification.
@@ -206,7 +218,7 @@ The dataset is available for download at [GitHub Deep Activity Rec](https://gith
   <img src="https://i.imgur.com/7yyWR3i.png" alt="B8" style="display:inline-block; width:45%; height:300px;">
 </div>
 
-#### **- B9 - Fine-Tuned Team Spatial Classification**
+#### **B9 - Fine-Tuned Team Spatial Classification**
 - **Description:** Fine-tunes ResNet50 on individual player actions before pooling team representations.
 
 - **Insights:** Achieves state-of-the-art accuracy by leveraging fine-grained person representations.
@@ -290,7 +302,7 @@ This table outlines the progression of different baseline models, highlighting t
 1. **Pass action recognition improves consistently**, peaking at ~96% recall in B8 with Team Pooling.
 2. **Winpoint classification struggles in early models but reaches 95% in B9**, proving the importance of structured team representation.
 3. **Spiking actions remain robust across all baselines**, with minor refinements from B7 onward.
-4. **Hierarchical modeling (B8 and B9) yields the best results**, demonstrating the effectiveness of structured feature learning.
+4. **Hierarchical modeling (B7,B8) yields the best results**, demonstrating the effectiveness of structured feature learning.
 5. **Team pooling (B8 with team separation) plays a crucial role** in reducing left/right confusion and boosting final performance.
 
 ## Usage
