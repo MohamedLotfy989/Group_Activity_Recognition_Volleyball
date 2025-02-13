@@ -25,6 +25,11 @@
   - [Configuration](#configuration)
   - [Evaluation](#evaluation)
   - [Logging and Outputs](#logging-and-outputs)
+- [Model Deployment](#model-deployment)
+  - [Model Deployment Pipeline](#model-deployment-pipeline)
+  - [Try It Yourself](#try-it-yourself)
+  - [How to Use the Model](#how-to-use-the-model)
+  - [Demo Preview](#demo-preview)
 
 
 ## 📚 Implemented Paper
@@ -73,6 +78,8 @@
 8. **Configurable Parameters**: YAML-based configuration for easy adjustment of model parameters.
 9. **Early Stopping and Visualization**: Built-in mechanisms for early stopping and metric visualization, including confusion matrices and classification reports.
 10. **Scalable and Modular Design**: Designed the project with a scalable and modular structure for easy expansion and maintainability.
+
+
 
 ## Installation
 1. Clone the repository:
@@ -332,3 +339,49 @@ Evaluation is performed automatically after training. Results include metrics li
 
 ### Logging and Outputs
 Logs and model outputs are organized into timestamped folders within the `runs/` directory for easy tracking of experiments.
+
+## **Model Deployment**
+This model has been deployed using **Streamlit and Hugging Face Spaces**, allowing users to **test the model directly in a web interface**. You can upload a **sequence of images (3-9 frames) or a video**, and the model will **detect players, extract features, and classify the group activity**.
+
+🔹 **Frameworks Used for Deployment:**
+- **Streamlit** → Frontend UI for testing the model interactively.
+- **Hugging Face Spaces** → Hosting the app for easy access.
+
+### **Model Deployment Pipeline:**
+1️⃣ **Player Detection:** YOLOv8 fine-tuned on volleyball data (**97.4% mAP50** accuracy). 🏆
+
+2️⃣ **Feature Extraction:** A deep feature extractor encodes player movements.
+
+3️⃣ **Activity Recognition:** A Hierarchical LSTM model predicts the group activity.
+
+### Try It Yourself!
+We have deployed a **Volleyball Activity Recognition model** that you can test **right now!** 🎯  
+
+🔹 **Upload a sequence of images (3-9 frames) or a video**  
+🔹 **The model will detect players, extract features, and classify the group activity.**  
+🔹 **If you upload a video, the app will overlay predictions on it!**  
+
+Click the button below to test it yourself: 
+
+[![Open in Hugging Face](https://img.shields.io/badge/Hugging%20Face%20App-Click%20Here-brightgreen?style=for-the-badge&logo=Hugging%20Face)](https://huggingface.co/spaces/MohamedLotfy989/volleyball-activity-recognition)
+
+###  **How to Use the Model**
+#### **📝 Steps to Test**
+1️⃣ **Click on the button above** to open the app.  
+
+2️⃣ **Upload** either:
+   - A **sequence of images (3-9 frames)**
+   - A **video file (MP4, AVI, etc.)**
+     
+3️⃣ **The model will process the input:**
+   - 🔍 **Detects players using YOLOv8**
+   - 🎭 **Extracts player features using a Feature Extractor**
+   - 🏆 **Predicts the group activity using LSTM**
+     
+4️⃣ **Results will be displayed on the screen.**  
+
+5️⃣ **For videos**, the model will **overlay predictions on the video**, and you can download the processed video.  
+
+### Demo Preview
+![Demo GIF](https://raw.githubusercontent.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball/main/demo.gif)
+
