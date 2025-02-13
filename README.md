@@ -48,6 +48,9 @@
  3. A new baseline(Baseline9) was introduced that achieved 92% accuracy without the need for a temporal model.
 
  4. Modern Framework: Re-implemented in PyTorch instead of Caffe.
+
+ 5. Fine-Tuned YOLOv8 for Player Detection: To **increase the labeled dataset** and improve **deployment for player detection**, achieving **97.4% mAP50**.
+
     
 ## Accuracy and Improvement Over the Paper
 <p align="center">
@@ -78,6 +81,7 @@
 8. **Configurable Parameters**: YAML-based configuration for easy adjustment of model parameters.
 9. **Early Stopping and Visualization**: Built-in mechanisms for early stopping and metric visualization, including confusion matrices and classification reports.
 10. **Scalable and Modular Design**: Designed the project with a scalable and modular structure for easy expansion and maintainability.
+11. **Fully Deployed & Interactive Testing:** The model is **deployed on Hugging Face Spaces** using **Streamlit**, allowing users to **upload videos or images and test the model in real-time through a web interface**.  
 
 
 
