@@ -83,6 +83,8 @@
 10. **Scalable and Modular Design**: Designed the project with a scalable and modular structure for easy expansion and maintainability.
 11. **Fully Deployed & Interactive Testing:** The model is **deployed on Hugging Face Spaces** using **Streamlit**, allowing users to **upload videos or images and test the model in real-time through a web interface**.  
 
+## Demo Preview
+![Demo GIF](https://raw.githubusercontent.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball/main/demo.gif)
 
 
 ## Installation
@@ -345,7 +347,7 @@ Evaluation is performed automatically after training. Results include metrics li
 Logs and model outputs are organized into timestamped folders within the `runs/` directory for easy tracking of experiments.
 
 ## **Model Deployment**
-This model has been deployed using **Streamlit and Hugging Face Spaces**, allowing users to **test the model directly in a web interface**. You can upload a **sequence of images (3-9 frames) or a video**, and the model will **detect players, extract features, and classify the group activity**.
+This model has been deployed using **Streamlit and Hugging Face Spaces**, allowing users to **test the model directly in a web interface**. You can upload a ** a video**, and the model will **detect players, extract features, and classify the group activity**.
 
 🔹 **Frameworks Used for Deployment:**
 - **Streamlit** → Frontend UI for testing the model interactively.
@@ -361,7 +363,7 @@ This model has been deployed using **Streamlit and Hugging Face Spaces**, allowi
 ### Try It Yourself!
 We have deployed a **Volleyball Activity Recognition model** that you can test **right now!** 🎯  
 
-🔹 **Upload a sequence of images (3-9 frames) or a video**  
+🔹 **Upload a Short video for volleyball match**  
 🔹 **The model will detect players, extract features, and classify the group activity.**  
 🔹 **If you upload a video, the app will overlay predictions on it!**  
 
@@ -373,8 +375,7 @@ Click the button below to test it yourself:
 #### **📝 Steps to Test**
 1️⃣ **Click on the button above** to open the app.  
 
-2️⃣ **Upload** either:
-   - A **sequence of images (3-9 frames)**
+2️⃣ **Upload** 
    - A **video file (MP4, AVI, etc.)**
      
 3️⃣ **The model will process the input:**
@@ -385,7 +386,3 @@ Click the button below to test it yourself:
 4️⃣ **Results will be displayed on the screen.**  
 
 5️⃣ **For videos**, the model will **overlay predictions on the video**, and you can download the processed video.  
-
-### Demo Preview
-![Demo GIF](https://raw.githubusercontent.com/MohamedLotfy989/Group_Activity_Recognition_Volleyball/main/demo.gif)
-
