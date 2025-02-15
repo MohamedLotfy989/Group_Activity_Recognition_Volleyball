@@ -11,6 +11,7 @@
 - [Key Changes](#key-changes)
   - [Accuracy and Improvement Over the Paper](#accuracy-and-improvement-over-the-paper)
 - [Key Takeaways](#key-takeaways)
+- [Demo Preview](#demo-preview)
 - [Installation](#installation)
 - [Dataset](#dataset)
   - [Dataset Labels](#dataset-labels)
@@ -29,7 +30,6 @@
   - [Model Deployment Pipeline](#model-deployment-pipeline)
   - [Try It Yourself](#try-it-yourself)
   - [How to Use the Model](#how-to-use-the-model)
-  - [Demo Preview](#demo-preview)
 
 
 ## 📚 Implemented Paper
