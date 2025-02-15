@@ -44,12 +44,12 @@ def main():
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')
 
-    # logging.info("Creating dataset YAML configuration file...")
-    # create_dataset_yaml(train_images_dir=args.train_images,
-    #                     val_images_dir=args.val_images,
-    #                     nc=1,
-    #                     names=['player'],
-    #                     output_path=args.data_yaml)
+    logging.info("Creating dataset YAML configuration file...")
+    create_dataset_yaml(train_images_dir=args.train_images,
+                         val_images_dir=args.val_images,
+                         nc=1,
+                         names=['player'],
+                         output_path=args.data_yaml)
 
     if args.resume:
         logging.info(f"Resuming training from '{args.resume}' ...")
